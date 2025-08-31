@@ -48,9 +48,11 @@ const Hero = () => {
             {heroContent.badge || "Governance-first group investing"}
           </div>
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-slate-900">
-            {heroContent.headline}
+            {heroContent.headline || heroContent.heading || "Group investing without the group drama."}
           </h1>
-          <p className="mt-5 text-lg text-slate-700 leading-relaxed">{heroContent.subhead}</p>
+          <p className="mt-5 text-lg text-slate-700 leading-relaxed">
+            {heroContent.subhead || heroContent.subheading || "Take the conflict out of group investing. Our platform ensures every contribution, payout, and decision is clear and auditable."}
+          </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a 
               href={typeof heroContent.cta?.primary === 'string' ? 
