@@ -1,0 +1,701 @@
+{
+  "set1": {
+    "hero": {
+      "heading": "Group investing without the group drama.",
+      "subheading": "Pool money with people you trust, track everything transparently, and keep decisions fair — all in one platform.",
+      "cta": {
+        "primary": "Start Your Group",
+        "secondary": "See How It Works"
+      }
+    },
+    "problemSolution": {
+      "heading": "From Frustration to Fulfillment",
+      "tagline": "The Challenge & Our Solution",
+      "problem": {
+        "title": "The Problem",
+        "points": [
+          "Investing together sounds great — until conflicts, confusion, and paperwork get in the way."
+        ]
+      },
+      "solution": {
+        "title": "Our Solution",
+        "points": [
+          "We take the drama out of group investing. From setup to tracking to voting, our platform keeps everything clear, fair, and simple."
+        ]
+      }
+    },
+    "howItWorks": {
+      "heading": "How it works",
+      "tagline": "Simple Process",
+      "subheading": "Our streamlined process gets you from setup to success with minimal effort",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Start a Group",
+          "description": "Invite your people.",
+          "icon": "🔑"
+        },
+        {
+          "number": "02",
+          "title": "Set Rules",
+          "description": "Agree upfront with easy templates.",
+          "icon": "⚙️"
+        },
+        {
+          "number": "03",
+          "title": "Pool Money",
+          "description": "Contributions and balances tracked in real time.",
+          "icon": "📊"
+        },
+        {
+          "number": "04",
+          "title": "Invest Together",
+          "description": "4. Vote, decide, and grow — no fights, no fuss.",
+          "icon": "✨"
+        }
+      ]
+    },
+    "features": {
+      "heading": "Everything You Need",
+      "tagline": "Key Features",
+      "subheading": "Discover the tools that will transform your business operations",
+      "featureList": [
+        {
+          "title": "Stay Compliant",
+          "description": "Automated reminders and filings.",
+          "icon": "📱"
+        },
+        {
+          "title": "Track Transparently",
+          "description": "Every dollar accounted for.",
+          "icon": "📊"
+        },
+        {
+          "title": "Decide Together",
+          "description": "Voting tools that settle disputes before they start.",
+          "icon": "👥"
+        },
+        {
+          "title": "Easy Exits",
+          "description": "Leave smoothly, without leaving a mess.",
+          "icon": "☁️"
+        }
+      ]
+    },
+    "testimonial": {
+      "heading": "What Our Customers Say",
+      "tagline": "Testimonials",
+      "featured": {
+        "quote": "Vault saved us from endless group chats and spreadsheets. No more arguments — just clear, simple investing together.",
+        "name": "David Anderson",
+        "title": "CTO, Global Innovations"
+      },
+      "testimonials": [
+        {
+          "quote": "Vaultx transformed how our team works together. We've seen a 40% increase in productivity and our clients are happier than ever.",
+          "name": "Sarah Johnson",
+          "title": "CEO, TechVision Inc.",
+          "avatar": "👩🏽‍💼"
+        },
+        {
+          "quote": "The automation features alone saved us hundreds of hours per month. The ROI was immediate and the support team is incredible.",
+          "name": "Michael Chen",
+          "title": "Operations Director, Flux Enterprises",
+          "avatar": "👨🏻‍💼"
+        },
+        {
+          "quote": "We were skeptical at first, but within weeks our team was completely on board. The analytics dashboards provide insights we never had access to before.",
+          "name": "Emma Rodriguez",
+          "title": "Marketing Manager, Brand Solutions",
+          "avatar": "👩🏻‍💼"
+        }
+      ]
+    },
+    "pricing": {
+      "heading": "Choose the Right Plan",
+      "tagline": "Pricing Plans",
+      "subheading": "Flexible options to suit businesses of any size. All plans include a 14-day free trial.",
+      "plans": [
+        {
+          "name": "Starter",
+          "price": "$120",
+          "period": "per month",
+          "description": "Perfect for small businesses just getting started",
+          "features": [
+            "Up to 5 team members",
+            "Basic automation features",
+            "10GB cloud storage",
+            "Standard analytics",
+            "Email support"
+          ],
+          "isPopular": false,
+          "ctaText": "Start Free Trial"
+        },
+        {
+          "name": "Professional",
+          "price": "$240",
+          "period": "per month",
+          "description": "Ideal for growing businesses with expanding needs",
+          "features": [
+            "Up to 20 team members",
+            "Advanced automation tools",
+            "100GB cloud storage",
+            "Enhanced analytics & reporting",
+            "Priority email & chat support",
+            "API access",
+            "Custom integrations"
+          ],
+          "isPopular": true,
+          "ctaText": "Start Free Trial"
+        },
+        {
+          "name": "Enterprise",
+          "price": "$199",
+          "period": "per month",
+          "description": "For large organizations requiring premium features",
+          "features": [
+            "Unlimited team members",
+            "Full automation suite",
+            "Unlimited cloud storage",
+            "Advanced AI analytics",
+            "24/7 dedicated support",
+            "Advanced security controls",
+            "Custom development",
+            "Dedicated account manager"
+          ],
+          "isPopular": false,
+          "ctaText": "Contact Sales"
+        }
+      ],
+      "custom": {
+        "title": "Need a custom solution?",
+        "description": "Contact our sales team for a customized plan tailored to your specific requirements.",
+        "buttonText": "Contact Us"
+      }
+    },
+    "closing": {
+      "heading": "Turn your group into a team — minus the drama.",
+      "subheading": "Build wealth together, without the conflict.",
+      "stats": [
+        { "number": "93%", "label": "Customer Satisfaction" },
+        { "number": "40%", "label": "Average Productivity Increase" },
+        { "number": "28%", "label": "Cost Reduction" }
+      ],
+      "cta": {
+        "primary": "Join the Waitlist",
+        "secondary": "See How It Works"
+      },
+      "footnote": ""
+    },
+    "footer": {
+      "companyName": "Vaultx",
+      "tagline": "Transforming how businesses operate with intuitive, powerful software solutions.",
+      "links": [
+        {
+          "title": "Product",
+          "links": [
+            { "name": "Features", "href": "#features" },
+            { "name": "Pricing", "href": "#pricing" },
+            { "name": "Testimonials", "href": "#testimonials" },
+            { "name": "Integrations", "href": "#" },
+            { "name": "Updates", "href": "#" }
+          ]
+        },
+        {
+          "title": "Resources",
+          "links": [
+            { "name": "Documentation", "href": "#" },
+            { "name": "Tutorials", "href": "#" },
+            { "name": "Blog", "href": "#" },
+            { "name": "Support Center", "href": "#" },
+            { "name": "Partners", "href": "#" }
+          ]
+        },
+        {
+          "title": "Company",
+          "links": [
+            { "name": "About Us", "href": "#" },
+            { "name": "Careers", "href": "#" },
+            { "name": "Press", "href": "#" },
+            { "name": "Contact", "href": "#" },
+            { "name": "Privacy Policy", "href": "#" }
+          ]
+        }
+      ],
+      "legal": {
+        "copyright": "© 2025 Vaultx. All rights reserved.",
+        "links": [
+          { "name": "Terms of Service", "href": "#" },
+          { "name": "Privacy Policy", "href": "#" },
+          { "name": "Cookie Policy", "href": "#" }
+        ]
+      }
+    }
+  },
+  "set2": {
+    "hero": {
+      "heading": "Keep the fun in friends and the fights out of funds.",
+      "subheading": "Vault makes it easy to invest together without risking relationships. Pool your money, invest transparently, and keep the good vibes intact.",
+      "cta": {
+        "primary": "Join the Waitlist",
+        "secondary": "Learn How It Works"
+      }
+    },
+    "problemSolution": {
+      "heading": "From Frustration to Fulfillment",
+      "tagline": "The Challenge & Our Solution",
+      "problem": {
+        "title": "The Problem",
+        "points": [
+          "Mixing money and friends often ends in conflict, confusion, or awkward conversations."
+        ]
+      },
+      "solution": {
+        "title": "Our Solution",
+        "points": [
+          "Our platform keeps friendships intact. With built-in transparency, fair voting, and clear exits, you can invest together without risking relationships."
+        ]
+      }
+    },
+    "howItWorks": {
+      "heading": "How it works",
+      "tagline": "Simple Process",
+      "subheading": "Our streamlined process gets you from setup to success with minimal effort",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Invite Friends",
+          "description": "Start your group with people you already trust.",
+          "icon": "🔑"
+        },
+        {
+          "number": "02",
+          "title": "Set the Rules",
+          "description": "Simple templates keep it fair.",
+          "icon": "⚙️"
+        },
+        {
+          "number": "03",
+          "title": "Pool the Money",
+          "description": "Every contribution is tracked automatically.",
+          "icon": "📊"
+        },
+        {
+          "number": "04",
+          "title": "Invest Together",
+          "description": "Make decisions as a team, and grow without the drama.",
+          "icon": "✨"
+        }
+      ]
+    },
+    "features": {
+      "heading": "Everything You Need",
+      "tagline": "Key Features",
+      "subheading": "Discover the tools that will transform your business operations",
+      "featureList": [
+        {
+          "title": "Transparent Tracking",
+          "description": "No secrets, no fights, just clarity.",
+          "icon": "📱"
+        },
+        {
+          "title": "Shared Decisions",
+          "description": "Built-in voting keeps everyone aligned.",
+          "icon": "📊"
+        },
+        {
+          "title": "Fair Exits",
+          "description": "Leave gracefully, no hard feelings.",
+          "icon": "👥"
+        },
+        {
+          "title": "Easy Setup",
+          "description": "No lawyers or spreadsheets required.",
+          "icon": "☁️"
+        }
+      ]
+    },
+    "testimonial": {
+      "heading": "What Our Customers Say",
+      "tagline": "Testimonials",
+      "featured": {
+        "quote": "We wanted to invest together without risking our friendships. This gave us the structure we needed and kept the vibe positive.",
+        "name": "David Anderson",
+        "title": "CTO, Global Innovations"
+      },
+      "testimonials": [
+        {
+          "quote": "Vaultx transformed how our team works together. We've seen a 40% increase in productivity and our clients are happier than ever.",
+          "name": "Sarah Johnson",
+          "title": "CEO, TechVision Inc.",
+          "avatar": "👩🏽‍💼"
+        },
+        {
+          "quote": "The automation features alone saved us hundreds of hours per month. The ROI was immediate and the support team is incredible.",
+          "name": "Michael Chen",
+          "title": "Operations Director, Flux Enterprises",
+          "avatar": "👨🏻‍💼"
+        },
+        {
+          "quote": "We were skeptical at first, but within weeks our team was completely on board. The analytics dashboards provide insights we never had access to before.",
+          "name": "Emma Rodriguez",
+          "title": "Marketing Manager, Brand Solutions",
+          "avatar": "👩🏻‍💼"
+        }
+      ]
+    },
+    "pricing": {
+      "heading": "Choose the Right Plan",
+      "tagline": "Pricing Plans",
+      "subheading": "Flexible options to suit businesses of any size. All plans include a 14-day free trial.",
+      "plans": [
+        {
+          "name": "Starter",
+          "price": "$120",
+          "period": "per month",
+          "description": "Perfect for small businesses just getting started",
+          "features": [
+            "Up to 5 team members",
+            "Basic automation features",
+            "10GB cloud storage",
+            "Standard analytics",
+            "Email support"
+          ],
+          "isPopular": false,
+          "ctaText": "Start Free Trial"
+        },
+        {
+          "name": "Professional",
+          "price": "$240",
+          "period": "per month",
+          "description": "Ideal for growing businesses with expanding needs",
+          "features": [
+            "Up to 20 team members",
+            "Advanced automation tools",
+            "100GB cloud storage",
+            "Enhanced analytics & reporting",
+            "Priority email & chat support",
+            "API access",
+            "Custom integrations"
+          ],
+          "isPopular": true,
+          "ctaText": "Start Free Trial"
+        },
+        {
+          "name": "Enterprise",
+          "price": "$199",
+          "period": "per month",
+          "description": "For large organizations requiring premium features",
+          "features": [
+            "Unlimited team members",
+            "Full automation suite",
+            "Unlimited cloud storage",
+            "Advanced AI analytics",
+            "24/7 dedicated support",
+            "Advanced security controls",
+            "Custom development",
+            "Dedicated account manager"
+          ],
+          "isPopular": false,
+          "ctaText": "Contact Sales"
+        }
+      ],
+      "custom": {
+        "title": "Need a custom solution?",
+        "description": "Contact our sales team for a customized plan tailored to your specific requirements.",
+        "buttonText": "Contact Us"
+      }
+    },
+    "closing": {
+      "heading": "Invest together without risking your relationships.",
+      "subheading": "Build wealth, keep the friendships.",
+      "stats": [
+        { "number": "93%", "label": "Customer Satisfaction" },
+        { "number": "40%", "label": "Average Productivity Increase" },
+        { "number": "28%", "label": "Cost Reduction" }
+      ],
+      "cta": {
+        "primary": "Join the Waitlist",
+        "secondary": "See How It Works"
+      },
+      "footnote": ""
+    },
+    "footer": {
+      "companyName": "Vaultx",
+      "tagline": "Transforming how businesses operate with intuitive, powerful software solutions.",
+      "links": [
+        {
+          "title": "Product",
+          "links": [
+            { "name": "Features", "href": "#features" },
+            { "name": "Pricing", "href": "#pricing" },
+            { "name": "Testimonials", "href": "#testimonials" },
+            { "name": "Integrations", "href": "#" },
+            { "name": "Updates", "href": "#" }
+          ]
+        },
+        {
+          "title": "Resources",
+          "links": [
+            { "name": "Documentation", "href": "#" },
+            { "name": "Tutorials", "href": "#" },
+            { "name": "Blog", "href": "#" },
+            { "name": "Support Center", "href": "#" },
+            { "name": "Partners", "href": "#" }
+          ]
+        },
+        {
+          "title": "Company",
+          "links": [
+            { "name": "About Us", "href": "#" },
+            { "name": "Careers", "href": "#" },
+            { "name": "Press", "href": "#" },
+            { "name": "Contact", "href": "#" },
+            { "name": "Privacy Policy", "href": "#" }
+          ]
+        }
+      ],
+      "legal": {
+        "copyright": "© 2025 Vaultx. All rights reserved.",
+        "links": [
+          { "name": "Terms of Service", "href": "#" },
+          { "name": "Privacy Policy", "href": "#" },
+          { "name": "Cookie Policy", "href": "#" }
+        ]
+      }
+    }
+  },
+  "set3": {
+    "hero": {
+      "heading": "No fights, just funds.",
+      "subheading": "Vault makes group investing simple, fair, and transparent — so you can grow your wealth together without the conflict.",
+      "cta": {
+        "primary": "Start Your Group",
+        "secondary": "See How It Works"
+      }
+    },
+    "problemSolution": {
+      "heading": "From Frustration to Fulfillment",
+      "tagline": "The Challenge & Our Solution",
+      "problem": {
+        "title": "The Problem",
+        "points": [
+          "Group investing often falls apart — arguments over money, messy spreadsheets, and unclear rules ruin the experience."
+        ]
+      },
+      "solution": {
+        "title": "Our Solution",
+        "points": [
+          "Vault makes it simple. We handle setup, track contributions, and keep decisions fair so your group can focus on opportunities, not conflicts."
+        ]
+      }
+    },
+    "howItWorks": {
+      "heading": "How it works",
+      "tagline": "Simple Process",
+      "subheading": "Our streamlined process gets you from setup to success with minimal effort",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Create a Group",
+          "description": "Invite friends or colleagues.",
+          "icon": "🔑"
+        },
+        {
+          "number": "02",
+          "title": "Set the Rules",
+          "description": "Agree upfront with easy templates.",
+          "icon": "⚙️"
+        },
+        {
+          "number": "03",
+          "title": "Pool Money",
+          "description": "Every contribution tracked in real time.",
+          "icon": "📊"
+        },
+        {
+          "number": "04",
+          "title": "Invest Together",
+          "description": "Vote, decide, and grow as a team.",
+          "icon": "✨"
+        }
+      ]
+    },
+    "features": {
+      "heading": "Everything You Need",
+      "tagline": "Key Features",
+      "subheading": "Discover the tools that will transform your business operations",
+      "featureList": [
+        {
+          "title": "Conflict-Free",
+          "description": "Transparent tracking and voting.",
+          "icon": "📱"
+        },
+        {
+          "title": "Fair & Simple",
+          "description": "No lawyers, no spreadsheets.",
+          "icon": "📊"
+        },
+        {
+          "title": "Stay Aligned",
+          "description": "Rules keep everyone on the same page.",
+          "icon": "👥"
+        },
+        {
+          "title": "Easy Exits",
+          "description": "Leave smoothly without hurting the group.",
+          "icon": "☁️"
+        }
+      ]
+    },
+    "testimonial": {
+      "heading": "What Our Customers Say",
+      "tagline": "Testimonials",
+      "featured": {
+        "quote": "Vault turned a stressful idea into a simple process. We finally invested together without the fights.",
+        "name": "David Anderson",
+        "title": "CTO, Global Innovations"
+      },
+      "testimonials": [
+        {
+          "quote": "Vaultx transformed how our team works together. We've seen a 40% increase in productivity and our clients are happier than ever.",
+          "name": "Sarah Johnson",
+          "title": "CEO, TechVision Inc.",
+          "avatar": "👩🏽‍💼"
+        },
+        {
+          "quote": "The automation features alone saved us hundreds of hours per month. The ROI was immediate and the support team is incredible.",
+          "name": "Michael Chen",
+          "title": "Operations Director, Flux Enterprises",
+          "avatar": "👨🏻‍💼"
+        },
+        {
+          "quote": "We were skeptical at first, but within weeks our team was completely on board. The analytics dashboards provide insights we never had access to before.",
+          "name": "Emma Rodriguez",
+          "title": "Marketing Manager, Brand Solutions",
+          "avatar": "👩🏻‍💼"
+        }
+      ]
+    },
+    "pricing": {
+      "heading": "Choose the Right Plan",
+      "tagline": "Pricing Plans",
+      "subheading": "Flexible options to suit businesses of any size. All plans include a 14-day free trial.",
+      "plans": [
+        {
+          "name": "Starter",
+          "price": "$120",
+          "period": "per month",
+          "description": "Perfect for small businesses just getting started",
+          "features": [
+            "Up to 5 team members",
+            "Basic automation features",
+            "10GB cloud storage",
+            "Standard analytics",
+            "Email support"
+          ],
+          "isPopular": false,
+          "ctaText": "Start Free Trial"
+        },
+        {
+          "name": "Professional",
+          "price": "$240",
+          "period": "per month",
+          "description": "Ideal for growing businesses with expanding needs",
+          "features": [
+            "Up to 20 team members",
+            "Advanced automation tools",
+            "100GB cloud storage",
+            "Enhanced analytics & reporting",
+            "Priority email & chat support",
+            "API access",
+            "Custom integrations"
+          ],
+          "isPopular": true,
+          "ctaText": "Start Free Trial"
+        },
+        {
+          "name": "Enterprise",
+          "price": "$199",
+          "period": "per month",
+          "description": "For large organizations requiring premium features",
+          "features": [
+            "Unlimited team members",
+            "Full automation suite",
+            "Unlimited cloud storage",
+            "Advanced AI analytics",
+            "24/7 dedicated support",
+            "Advanced security controls",
+            "Custom development",
+            "Dedicated account manager"
+          ],
+          "isPopular": false,
+          "ctaText": "Contact Sales"
+        }
+      ],
+      "custom": {
+        "title": "Need a custom solution?",
+        "description": "Contact our sales team for a customized plan tailored to your specific requirements.",
+        "buttonText": "Contact Us"
+      }
+    },
+    "closing": {
+      "heading": "Group investing made easy.",
+      "subheading": "No drama, no fights — just funds.",
+      "stats": [
+        { "number": "93%", "label": "Customer Satisfaction" },
+        { "number": "40%", "label": "Average Productivity Increase" },
+        { "number": "28%", "label": "Cost Reduction" }
+      ],
+      "cta": {
+        "primary": "Join the Waitlist",
+        "secondary": "See How It Works"
+      },
+      "footnote": ""
+    },
+    "footer": {
+      "companyName": "Vaultx",
+      "tagline": "Transforming how businesses operate with intuitive, powerful software solutions.",
+      "links": [
+        {
+          "title": "Product",
+          "links": [
+            { "name": "Features", "href": "#features" },
+            { "name": "Pricing", "href": "#pricing" },
+            { "name": "Testimonials", "href": "#testimonials" },
+            { "name": "Integrations", "href": "#" },
+            { "name": "Updates", "href": "#" }
+          ]
+        },
+        {
+          "title": "Resources",
+          "links": [
+            { "name": "Documentation", "href": "#" },
+            { "name": "Tutorials", "href": "#" },
+            { "name": "Blog", "href": "#" },
+            { "name": "Support Center", "href": "#" },
+            { "name": "Partners", "href": "#" }
+          ]
+        },
+        {
+          "title": "Company",
+          "links": [
+            { "name": "About Us", "href": "#" },
+            { "name": "Careers", "href": "#" },
+            { "name": "Press", "href": "#" },
+            { "name": "Contact", "href": "#" },
+            { "name": "Privacy Policy", "href": "#" }
+          ]
+        }
+      ],
+      "legal": {
+        "copyright": "© 2025 Vaultx. All rights reserved.",
+        "links": [
+          { "name": "Terms of Service", "href": "#" },
+          { "name": "Privacy Policy", "href": "#" },
+          { "name": "Cookie Policy", "href": "#" }
+        ]
+      }
+    }
+  }
+}
