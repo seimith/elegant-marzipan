@@ -3,21 +3,25 @@
 import React from 'react';
 import { useCopy } from '../../content/CopyContext';
 
+interface PricingTierProps { 
+  name: string; 
+  price: string; 
+  description: string; 
+  features: string[]; 
+  cta: string | { text: string; href: string; }; 
+  featured?: boolean;
+  highlight?: boolean; 
+}
+
 const PricingTier = ({ 
   name, 
   price, 
   description, 
   features, 
   cta, 
-  featured = false 
-}: { 
-  name: string; 
-  price: string; 
-  description: string; 
-  features: string[]; 
-  cta: string; 
-  featured?: boolean 
-}) => {
+  featured = false,
+  highlight = false
+}: PricingTierProps) => {
   return (
     <div className={`flex flex-col h-full rounded-3xl bg-white p-8 shadow-lg ring-1 ring-slate-200 ${featured ? 'relative z-10 scale-105' : ''}`}>
       {featured && (
@@ -47,10 +51,10 @@ const PricingTier = ({
       </div>
       <div className="mt-8 flex flex-1 items-end">
         <a 
-          href="#signup" 
-          className={`inline-block w-full rounded-xl px-4 py-3 text-center font-medium ${featured ? 'bg-blue-500 text-white hover:bg-blue-600' : 'bg-slate-100 text-slate-900 hover:bg-slate-200'}`}
+          href={typeof cta === 'object' ? cta.href : '#signup'} 
+          className={`inline-block w-full rounded-xl px-4 py-3 text-center font-medium ${featured || highlight ? 'bg-blue-500 text-white hover:bg-blue-600' : 'bg-slate-100 text-slate-900 hover:bg-slate-200'}`}
         >
-          {cta}
+          {typeof cta === 'object' ? cta.text : cta}
         </a>
       </div>
     </div>
@@ -60,6 +64,9 @@ const PricingTier = ({
 const Pricing = () => {
   const { content } = useCopy();
   const pricingContent = content.pricing;
+  
+  // Early return if no content
+  if (!pricingContent) return null;
 
   return (
     <section id="pricing" className="py-20 md:py-28 bg-gray-50">
@@ -74,15 +81,16 @@ const Pricing = () => {
         </div>
 
         <div className="mt-12 grid gap-8 md:grid-cols-3">
-          {pricingContent.plans.map((plan: any, index: number) => (
+          {(pricingContent.plans || pricingContent.tiers)?.map((plan, index: number) => (
             <PricingTier
               key={index}
               name={plan.name}
-              price={`$${plan.price}`}
+              price={typeof plan.price === 'string' ? plan.price : `$${plan.price}`}
               description={plan.description || `${plan.name} tier for investment groups`}
               features={plan.features}
               cta={plan.cta}
-              featured={plan.featured}
+              featured={plan.featured || false}
+              highlight={plan.highlight || plan.popular || false}
             />
           ))}
         </div>

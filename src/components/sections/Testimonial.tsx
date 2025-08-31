@@ -1,25 +1,27 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import { useCopy } from '../../content/CopyContext';
+import { TestimonialItem } from '../../types/copyTypes';
 
-interface TestimonialFeatured {
-  quote: string;
-  name: string;
-  title: string;
-  image?: string;
-}
+// We're already importing TestimonialItem which has the same structure
 
 const Testimonial = () => {
   const { content } = useCopy();
-  const testimonialContent = content.testimonial as any;
+  const testimonialContent = content.testimonial || content.testimonials;
+  
+  // Early return if no content
+  if (!testimonialContent) return null;
   
   // Extract featured testimonial data with fallbacks
-  const featured: TestimonialFeatured = {
-    quote: testimonialContent?.featured?.quote || "Vault saved us from endless group chats and spreadsheets. No more arguments — just clear, simple investing together.",
-    name: testimonialContent?.featured?.name || "David Anderson",
-    title: testimonialContent?.featured?.title || "CTO, Global Innovations",
-    image: testimonialContent?.featured?.image || "/placeholder-person.jpg"
+  const testimonialsArray = testimonialContent?.testimonials || testimonialContent?.items || [];
+  const featured: TestimonialItem = testimonialsArray.length > 0 ? testimonialsArray[0] : {
+    quote: "Vault saved us from endless group chats and spreadsheets. No more arguments — just clear, simple investing together.",
+    name: "David Anderson",
+    title: "CTO, Global Innovations",
+    avatar: "/placeholder-person.jpg",
+    image: "/placeholder-person.jpg"
   };
 
   return (
@@ -41,10 +43,12 @@ const Testimonial = () => {
           <div className="md:col-span-2">
             <div className="bg-white rounded-2xl shadow-lg border border-slate-100 p-8">
               <div className="flex items-center gap-4 mb-6">
-                <img 
+                <Image 
                   className="h-14 w-14 rounded-full object-cover" 
-                  src={featured.image} 
+                  src={featured.avatar || featured.image || '/placeholder-person.jpg'} 
                   alt={featured.name} 
+                  width={56}
+                  height={56}
                 />
                 <div>
                   <h3 className="font-semibold text-slate-900">{featured.name}</h3>
@@ -55,7 +59,7 @@ const Testimonial = () => {
                 {'★'.repeat(5)}
               </div>
               <blockquote className="text-lg text-slate-700 leading-relaxed">
-                "{featured.quote}"
+                &ldquo;{featured.quote}&rdquo;
               </blockquote>
             </div>
           </div>

@@ -2,10 +2,14 @@
 
 import React from 'react';
 import { useCopy } from '../../content/CopyContext';
+import { ClosingContent } from '../../types/copyTypes';
 
 const Closing = () => {
   const { content } = useCopy();
-  const closingContent = content.closing;
+  const closingContent = content.closing as ClosingContent;
+  
+  // Early return if no closing content
+  if (!closingContent) return null;
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-slate-900 to-slate-800">
@@ -17,23 +21,31 @@ const Closing = () => {
             {"Ready to get started?"}
           </div>
           <h2 className="text-3xl font-semibold tracking-tight text-white">
-            {closingContent.heading}
+            {closingContent.heading || "Ready to transform your workflow?"}
           </h2>
           <p className="mt-5 text-lg text-slate-300 leading-relaxed">
-            {closingContent.subheading}
+            {closingContent.description || "Join thousands of teams already using our platform to improve their productivity."}
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a
-              href="#signup"
+              href={typeof closingContent.cta?.primary === 'string' ? 
+                '#signup' : 
+                (closingContent.cta?.primary?.href || '#signup')}
               className="rounded-xl bg-white px-5 py-3 text-sm font-medium text-slate-900 hover:bg-slate-100"
             >
-              {closingContent.cta?.primary || "Get Started Free"}
+              {typeof closingContent.cta?.primary === 'string' ? 
+                closingContent.cta?.primary : 
+                (closingContent.cta?.primary?.text || 'Get Started Free')}
             </a>
             <a
-              href="#contact"
+              href={typeof closingContent.cta?.secondary === 'string' ? 
+                '#contact' : 
+                (closingContent.cta?.secondary?.href || '#contact')}
               className="rounded-xl border border-slate-600 bg-transparent px-5 py-3 text-sm font-medium text-white hover:bg-slate-800"
             >
-              {closingContent.cta?.secondary || "Schedule Demo"}
+              {typeof closingContent.cta?.secondary === 'string' ? 
+                closingContent.cta?.secondary : 
+                (closingContent.cta?.secondary?.text || 'Schedule Demo')}
             </a>
           </div>
           

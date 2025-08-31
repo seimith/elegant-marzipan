@@ -2,20 +2,16 @@
 
 import React from 'react';
 import { useCopy } from '../../content/CopyContext';
+import { FooterContent, FooterLink, FooterColumn as FooterColumnType, FooterSection } from '../../types/copyTypes';
 
-interface SocialLink {
-  name: string;
-  href: string;
-}
-
-interface FooterColumn {
-  title: string;
-  links: { name: string; href: string; }[];
-}
+// Using types imported from copyTypes.ts
 
 const Footer = () => {
   const { content } = useCopy();
-  const footerContent = content.footer as any;
+  const footerContent = content.footer as FooterContent;
+  
+  // Early return if no content
+  if (!footerContent) return null;
 
   // Handle both footer structures (columns structure or links structure)
   const hasColumns = footerContent?.columns && Array.isArray(footerContent.columns);
@@ -36,9 +32,9 @@ const Footer = () => {
                   {footerContent?.description || footerContent?.tagline || 'Transforming the way investment groups collaborate.'}
                 </p>
                 
-                {hasSocialLinks && (
+                {hasSocialLinks && footerContent.socialLinks && (
                   <div className="mt-6 flex space-x-4">
-                    {footerContent.socialLinks.map((social: SocialLink, index: number) => (
+                    {footerContent.socialLinks.map((social: FooterLink, index: number) => (
                       <a key={index} href={social.href} className="rounded-full bg-slate-700/70 p-2 text-slate-300 hover:bg-slate-600 hover:text-white transition-colors">
                         <span className="sr-only">{social.name}</span>
                         {/* Icon placeholder using SVG for modern look */}
@@ -52,9 +48,9 @@ const Footer = () => {
               </div>
 
               {/* Navigation links - handle both structures */}
-              {hasColumns && (
+              {hasColumns && footerContent.columns && (
                 <>
-                  {footerContent.columns.map((column: FooterColumn, index: number) => (
+                  {footerContent.columns.map((column: FooterColumnType, index: number) => (
                     <div key={index}>
                       <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-100">
                         {column.title}
@@ -77,9 +73,9 @@ const Footer = () => {
               )}
 
               {/* Alternative structure for links */}
-              {hasLinks && !hasColumns && (
+              {hasLinks && !hasColumns && footerContent.links && (
                 <>
-                  {footerContent.links.map((section: any, index: number) => (
+                  {footerContent.links.map((section: FooterSection, index: number) => (
                     <div key={index}>
                       <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-100">
                         {section.title}
@@ -110,7 +106,7 @@ const Footer = () => {
                 </p>
                 {footerContent?.legal?.links && (
                   <div className="mt-4 flex space-x-6 md:mt-0">
-                    {footerContent.legal.links.map((link: { name: string; href: string }, index: number) => (
+                    {footerContent.legal.links.map((link: FooterLink, index: number) => (
                       <a 
                         key={index} 
                         href={link.href}

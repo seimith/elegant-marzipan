@@ -2,32 +2,14 @@
 
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import contentSets from './marketingCopy.json';
+import { CopyContentType } from '../types/copyTypes';
 
 // Define content set types
 export type ContentSet = 'set1' | 'set2' | 'set3';
 type ContentSets = typeof contentSets;
 
-// Explicitly define the CopyContent structure for better type safety
-export type CopyContent = {
-  [key: string]: any; // Allow any property
-  nav?: {
-    logo: string;
-    links: Array<{ text: string; href: string }>;
-    cta: {
-      primary: { text: string; href: string };
-      secondary: { text: string; href: string };
-    };
-  };
-  hero?: any;
-  problemSolution?: any;
-  howItWorks?: any;
-  features?: any;
-  testimonial?: any;
-  testimonials?: any;
-  pricing?: any;
-  closing?: any;
-  footer?: any;
-}
+// Use our imported type for better type safety
+export type CopyContent = CopyContentType;
 
 // Use this type to reference the JSON structure
 export type ContentSetData = ContentSets[ContentSet];
