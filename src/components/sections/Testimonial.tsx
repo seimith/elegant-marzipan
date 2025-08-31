@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { useCopy } from '../../content/CopyContext';
 
 const Testimonial = () => {
@@ -27,7 +27,7 @@ const Testimonial = () => {
 
         {/* Featured Testimonial */}
         <div className="mb-16 bg-white p-8 md:p-12 rounded-2xl shadow-lg border border-gray-100 relative">
-          <div className="absolute top-0 left-0 transform -translate-x-4 -translate-y-4 text-8xl text-purple-200">"</div>
+          <div className="absolute top-0 left-0 transform -translate-x-4 -translate-y-4 text-8xl text-purple-200">&quot;</div>
           <div className="relative z-10">
             <p className="text-xl md:text-2xl font-light italic text-gray-700 mb-8">
               {testimonialContent.featured.quote}
@@ -52,7 +52,7 @@ const Testimonial = () => {
               key={index} 
               className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
             >
-              <div className="text-purple-600 text-4xl mb-4">"</div>
+              <div className="text-purple-600 text-4xl mb-4">&quot;</div>
               <p className="italic mb-8">{testimonial.quote}</p>
               <div className="flex items-center">
                 <div className="h-12 w-12 bg-purple-100 rounded-full flex items-center justify-center text-2xl">

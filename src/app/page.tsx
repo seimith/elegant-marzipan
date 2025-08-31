@@ -4,8 +4,6 @@ import Hero from '../components/sections/Hero';
 import ProblemSolution from '../components/sections/ProblemSolution';
 import HowItWorks from '../components/sections/HowItWorks';
 import Features from '../components/sections/Features';
-import Testimonial from '../components/sections/Testimonial';
-import Pricing from '../components/sections/Pricing';
 import Closing from '../components/sections/Closing';
 import Footer from '../components/sections/Footer';
 

@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import Image from 'next/image';
 import { useCopy } from '../../content/CopyContext';
 
 const Footer = () => {
@@ -9,7 +8,7 @@ const Footer = () => {
   const footerContent = content.footer;
   const footerLinks = footerContent.links;
 
-  const currentYear = new Date().getFullYear();
+  // const currentYear = new Date().getFullYear();
 
   return (
     <footer id="footer" className="bg-gray-900 text-white pt-16 pb-8">
