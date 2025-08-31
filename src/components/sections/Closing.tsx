@@ -8,44 +8,40 @@ const Closing = () => {
   const closingContent = content.closing;
 
   return (
-    <section id="closing" className="py-24 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-700 text-white">
-      <div className="max-w-5xl mx-auto px-4 text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-8">
-          {closingContent.heading}
-        </h2>
-        
-        <p className="text-xl md:text-2xl mb-12 text-white/90 max-w-3xl mx-auto">
-          {closingContent.subheading}
-        </p>
-        
-        <div className="bg-white/10 backdrop-blur-sm p-8 rounded-3xl mb-12">
-          <div className="grid md:grid-cols-3 gap-6 text-center">
-            {closingContent.stats.map((stat, index) => (
-              <div key={index}>
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-white/80">{stat.label}</div>
-              </div>
-            ))}
+    <section className="relative overflow-hidden bg-gradient-to-b from-slate-900 to-slate-800">
+      <div className="absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)] bg-[radial-gradient(ellipse_at_center,rgba(100,116,139,0.2),transparent_60%)]" />
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 md:py-28 text-center">
+        <div className="mx-auto max-w-3xl">
+          <div className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-800 px-3 py-1 text-xs text-slate-300 mb-6">
+            <span className="h-1.5 w-1.5 rounded-full bg-blue-400"></span>
+            {"Ready to get started?"}
           </div>
-        </div>
-        
-        <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-          <a 
-            href="#pricing" 
-            className="px-8 py-4 bg-white text-purple-700 rounded-full font-medium text-lg hover:bg-opacity-90 transition-all shadow-lg"
-          >
-            {closingContent.cta.primary}
-          </a>
-          <a 
-            href="#" 
-            className="px-8 py-4 bg-transparent border-2 border-white rounded-full font-medium text-lg hover:bg-white/10 transition-all"
-          >
-            {closingContent.cta.secondary}
-          </a>
-        </div>
-        
-        <div className="mt-12 text-sm text-white/70">
-          <p>{closingContent.footnote}</p>
+          <h2 className="text-3xl font-semibold tracking-tight text-white">
+            {closingContent.heading}
+          </h2>
+          <p className="mt-5 text-lg text-slate-300 leading-relaxed">
+            {closingContent.subheading}
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <a
+              href="#signup"
+              className="rounded-xl bg-white px-5 py-3 text-sm font-medium text-slate-900 hover:bg-slate-100"
+            >
+              {closingContent.cta?.primary || "Get Started Free"}
+            </a>
+            <a
+              href="#contact"
+              className="rounded-xl border border-slate-600 bg-transparent px-5 py-3 text-sm font-medium text-white hover:bg-slate-800"
+            >
+              {closingContent.cta?.secondary || "Schedule Demo"}
+            </a>
+          </div>
+          
+          {closingContent.footnote && (
+            <div className="mt-12 text-sm text-slate-400">
+              <p>{closingContent.footnote}</p>
+            </div>
+          )}
         </div>
       </div>
     </section>

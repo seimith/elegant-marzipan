@@ -1,11 +1,24 @@
 {
   "set1": {
-    "hero": {
-      "heading": "Group investing without the group drama.",
-      "subheading": "Pool money with people you trust, track everything transparently, and keep decisions fair — all in one platform.",
+    "nav": {
+      "logo": "Vault",
+      "links": [
+        { "text": "How it works", "href": "#how" },
+        { "text": "Features", "href": "#features" },
+        { "text": "Pricing", "href": "#pricing" }
+      ],
       "cta": {
-        "primary": "Start Your Group",
-        "secondary": "See How It Works"
+        "primary": { "text": "Join waitlist", "href": "#signup" },
+        "secondary": { "text": "Get a demo", "href": "#demo" }
+      }
+    },
+    "hero": {
+      "badge": "Governance-first group investing",
+      "headline": "Group investing without the group drama.",
+      "subhead": "Take the conflict out of group investing. Our platform ensures every contribution, payout, and decision is clear and auditable.",
+      "cta": {
+        "primary": { "text": "Join the Waitlist", "href": "#signup" },
+        "secondary": { "text": "See How It Works", "href": "#how" }
       }
     },
     "problemSolution": {
@@ -32,53 +45,59 @@
         {
           "number": "01",
           "title": "Start a Group",
-          "description": "Invite your people.",
-          "icon": "🔑"
+          "description": "Invite your people."
         },
         {
           "number": "02",
           "title": "Set Rules",
-          "description": "Agree upfront with easy templates.",
-          "icon": "⚙️"
+          "description": "Agree upfront with easy templates."
         },
         {
           "number": "03",
           "title": "Pool Money",
-          "description": "Contributions and balances tracked in real time.",
-          "icon": "📊"
+          "description": "Contributions and balances tracked in real time."
         },
         {
           "number": "04",
           "title": "Invest Together",
-          "description": "4. Vote, decide, and grow — no fights, no fuss.",
-          "icon": "✨"
+          "description": "Vote, decide, and grow — no fights, no fuss."
         }
       ]
     },
     "features": {
-      "heading": "Everything You Need",
-      "tagline": "Key Features",
-      "subheading": "Discover the tools that will transform your business operations",
-      "featureList": [
+      "heading": "Powerful Features For Successful Group Investing",
+      "tagline": "Built For Groups",
+      "description": "Everything you need to manage your investment group efficiently",
+      "items": [
         {
-          "title": "Stay Compliant",
-          "description": "Automated reminders and filings.",
-          "icon": "📱"
-        },
-        {
-          "title": "Track Transparently",
-          "description": "Every dollar accounted for.",
-          "icon": "📊"
-        },
-        {
-          "title": "Decide Together",
-          "description": "Voting tools that settle disputes before they start.",
+          "title": "Member Management",
+          "description": "Add, remove, and manage member permissions with ease.",
           "icon": "👥"
         },
         {
-          "title": "Easy Exits",
-          "description": "Leave smoothly, without leaving a mess.",
-          "icon": "☁️"
+          "title": "Contribution Tracking",
+          "description": "Monitor who has contributed what and when.",
+          "icon": "💰"
+        },
+        {
+          "title": "Voting System",
+          "description": "Built-in tools for democratic investment decisions.",
+          "icon": "🗳️"
+        },
+        {
+          "title": "Document Storage",
+          "description": "Keep all important documents in one secure place.",
+          "icon": "📁"
+        },
+        {
+          "title": "Bank Integration",
+          "description": "Connect directly with your group's bank account.",
+          "icon": "🏦"
+        },
+        {
+          "title": "Performance Reporting",
+          "description": "Track your group's investments performance over time.",
+          "icon": "📊"
         }
       ]
     },
@@ -92,7 +111,7 @@
       },
       "testimonials": [
         {
-          "quote": "Vaultx transformed how our team works together. We've seen a 40% increase in productivity and our clients are happier than ever.",
+          "quote": "Vault transformed how our team works together. We've seen a 40% increase in productivity and our clients are happier than ever.",
           "name": "Sarah Johnson",
           "title": "CEO, TechVision Inc.",
           "avatar": "👩🏽‍💼"
@@ -112,66 +131,58 @@
       ]
     },
     "pricing": {
-      "heading": "Choose the Right Plan",
+      "heading": "Simple, Transparent Pricing",
       "tagline": "Pricing Plans",
-      "subheading": "Flexible options to suit businesses of any size. All plans include a 14-day free trial.",
+      "subheading": "Choose the plan that fits your group's size and needs",
+      "footnote": "All plans include a 14-day free trial. No credit card required to start.",
       "plans": [
         {
           "name": "Starter",
-          "price": "$120",
+          "price": "49",
           "period": "per month",
-          "description": "Perfect for small businesses just getting started",
+          "description": "Perfect for small investment groups just getting started.",
           "features": [
-            "Up to 5 team members",
-            "Basic automation features",
-            "10GB cloud storage",
-            "Standard analytics",
+            "Up to 5 members",
+            "Basic contribution tracking",
+            "Simple voting system",
+            "Document storage (5GB)",
             "Email support"
           ],
-          "isPopular": false,
-          "ctaText": "Start Free Trial"
+          "featured": false,
+          "cta": "Get Started"
         },
         {
-          "name": "Professional",
-          "price": "$240",
+          "name": "Growth",
+          "price": "99",
           "period": "per month",
-          "description": "Ideal for growing businesses with expanding needs",
+          "description": "For established groups looking to scale efficiently.",
           "features": [
-            "Up to 20 team members",
-            "Advanced automation tools",
-            "100GB cloud storage",
-            "Enhanced analytics & reporting",
-            "Priority email & chat support",
-            "API access",
-            "Custom integrations"
+            "Up to 15 members",
+            "Advanced contribution tracking",
+            "Full voting & governance tools",
+            "Document storage (20GB)",
+            "Priority email & chat support"
           ],
-          "isPopular": true,
-          "ctaText": "Start Free Trial"
+          "featured": true,
+          "cta": "Try Risk-Free"
         },
         {
           "name": "Enterprise",
-          "price": "$199",
+          "price": "249",
           "period": "per month",
-          "description": "For large organizations requiring premium features",
+          "description": "For large or multiple investment groups with advanced needs.",
           "features": [
-            "Unlimited team members",
-            "Full automation suite",
-            "Unlimited cloud storage",
-            "Advanced AI analytics",
-            "24/7 dedicated support",
-            "Advanced security controls",
-            "Custom development",
-            "Dedicated account manager"
+            "Unlimited members",
+            "Custom contribution models",
+            "Advanced governance tools",
+            "Unlimited document storage",
+            "Dedicated account manager",
+            "API access"
           ],
-          "isPopular": false,
-          "ctaText": "Contact Sales"
+          "featured": false,
+          "cta": "Contact Sales"
         }
-      ],
-      "custom": {
-        "title": "Need a custom solution?",
-        "description": "Contact our sales team for a customized plan tailored to your specific requirements.",
-        "buttonText": "Contact Us"
-      }
+      ]
     },
     "closing": {
       "heading": "Turn your group into a team — minus the drama.",
@@ -188,7 +199,7 @@
       "footnote": ""
     },
     "footer": {
-      "companyName": "Vaultx",
+      "companyName": "Vault",
       "tagline": "Transforming how businesses operate with intuitive, powerful software solutions.",
       "links": [
         {
@@ -223,7 +234,7 @@
         }
       ],
       "legal": {
-        "copyright": "© 2025 Vaultx. All rights reserved.",
+        "copyright": " 2025 Vault. All rights reserved.",
         "links": [
           { "name": "Terms of Service", "href": "#" },
           { "name": "Privacy Policy", "href": "#" },
@@ -233,6 +244,18 @@
     }
   },
   "set2": {
+    "nav": {
+      "logo": "Vault",
+      "links": [
+        { "text": "How it works", "href": "#how" },
+        { "text": "Features", "href": "#features" },
+        { "text": "Pricing", "href": "#pricing" }
+      ],
+      "cta": {
+        "primary": { "text": "Join waitlist", "href": "#signup" },
+        "secondary": { "text": "Get a demo", "href": "#demo" }
+      }
+    },
     "hero": {
       "heading": "Keep the fun in friends and the fights out of funds.",
       "subheading": "Vault makes it easy to invest together without risking relationships. Pool your money, invest transparently, and keep the good vibes intact.",
@@ -265,53 +288,59 @@
         {
           "number": "01",
           "title": "Invite Friends",
-          "description": "Start your group with people you already trust.",
-          "icon": "🔑"
+          "description": "Start your group with people you already trust."
         },
         {
           "number": "02",
           "title": "Set the Rules",
-          "description": "Simple templates keep it fair.",
-          "icon": "⚙️"
+          "description": "Simple templates keep it fair."
         },
         {
           "number": "03",
           "title": "Pool the Money",
-          "description": "Every contribution is tracked automatically.",
-          "icon": "📊"
+          "description": "Every contribution is tracked automatically." 
         },
         {
           "number": "04",
           "title": "Invest Together",
-          "description": "Make decisions as a team, and grow without the drama.",
-          "icon": "✨"
+          "description": "Make decisions as a team, and grow without the drama."
         }
       ]
     },
     "features": {
-      "heading": "Everything You Need",
-      "tagline": "Key Features",
-      "subheading": "Discover the tools that will transform your business operations",
-      "featureList": [
+      "heading": "Powerful Features For Successful Group Investing",
+      "tagline": "Built For Groups",
+      "description": "Everything you need to manage your investment group efficiently",
+      "items": [
         {
-          "title": "Transparent Tracking",
-          "description": "No secrets, no fights, just clarity.",
-          "icon": "📱"
-        },
-        {
-          "title": "Shared Decisions",
-          "description": "Built-in voting keeps everyone aligned.",
-          "icon": "📊"
-        },
-        {
-          "title": "Fair Exits",
-          "description": "Leave gracefully, no hard feelings.",
+          "title": "Member Management",
+          "description": "Add, remove, and manage member permissions with ease.",
           "icon": "👥"
         },
         {
-          "title": "Easy Setup",
-          "description": "No lawyers or spreadsheets required.",
-          "icon": "☁️"
+          "title": "Contribution Tracking",
+          "description": "Monitor who has contributed what and when.",
+          "icon": "💰"
+        },
+        {
+          "title": "Voting System",
+          "description": "Built-in tools for democratic investment decisions.",
+          "icon": "🗳️"
+        },
+        {
+          "title": "Document Storage",
+          "description": "Keep all important documents in one secure place.",
+          "icon": "📁"
+        },
+        {
+          "title": "Bank Integration",
+          "description": "Connect directly with your group's bank account.",
+          "icon": "🏦"
+        },
+        {
+          "title": "Performance Reporting",
+          "description": "Track your group's investments performance over time.",
+          "icon": "📊"
         }
       ]
     },
@@ -325,7 +354,7 @@
       },
       "testimonials": [
         {
-          "quote": "Vaultx transformed how our team works together. We've seen a 40% increase in productivity and our clients are happier than ever.",
+          "quote": "Vault transformed how our team works together. We've seen a 40% increase in productivity and our clients are happier than ever.",
           "name": "Sarah Johnson",
           "title": "CEO, TechVision Inc.",
           "avatar": "👩🏽‍💼"
@@ -345,66 +374,58 @@
       ]
     },
     "pricing": {
-      "heading": "Choose the Right Plan",
+      "heading": "Simple, Transparent Pricing",
       "tagline": "Pricing Plans",
-      "subheading": "Flexible options to suit businesses of any size. All plans include a 14-day free trial.",
+      "subheading": "Choose the plan that fits your group's size and needs",
+      "footnote": "All plans include a 14-day free trial. No credit card required to start.",
       "plans": [
         {
           "name": "Starter",
-          "price": "$120",
+          "price": "49",
           "period": "per month",
-          "description": "Perfect for small businesses just getting started",
+          "description": "Perfect for small investment groups just getting started.",
           "features": [
-            "Up to 5 team members",
-            "Basic automation features",
-            "10GB cloud storage",
-            "Standard analytics",
+            "Up to 5 members",
+            "Basic contribution tracking",
+            "Simple voting system",
+            "Document storage (5GB)",
             "Email support"
           ],
-          "isPopular": false,
-          "ctaText": "Start Free Trial"
+          "featured": false,
+          "cta": "Get Started"
         },
         {
-          "name": "Professional",
-          "price": "$240",
+          "name": "Growth",
+          "price": "99",
           "period": "per month",
-          "description": "Ideal for growing businesses with expanding needs",
+          "description": "For established groups looking to scale efficiently.",
           "features": [
-            "Up to 20 team members",
-            "Advanced automation tools",
-            "100GB cloud storage",
-            "Enhanced analytics & reporting",
-            "Priority email & chat support",
-            "API access",
-            "Custom integrations"
+            "Up to 15 members",
+            "Advanced contribution tracking",
+            "Full voting & governance tools",
+            "Document storage (20GB)",
+            "Priority email & chat support"
           ],
-          "isPopular": true,
-          "ctaText": "Start Free Trial"
+          "featured": true,
+          "cta": "Try Risk-Free"
         },
         {
           "name": "Enterprise",
-          "price": "$199",
+          "price": "249",
           "period": "per month",
-          "description": "For large organizations requiring premium features",
+          "description": "For large or multiple investment groups with advanced needs.",
           "features": [
-            "Unlimited team members",
-            "Full automation suite",
-            "Unlimited cloud storage",
-            "Advanced AI analytics",
-            "24/7 dedicated support",
-            "Advanced security controls",
-            "Custom development",
-            "Dedicated account manager"
+            "Unlimited members",
+            "Custom contribution models",
+            "Advanced governance tools",
+            "Unlimited document storage",
+            "Dedicated account manager",
+            "API access"
           ],
-          "isPopular": false,
-          "ctaText": "Contact Sales"
+          "featured": false,
+          "cta": "Contact Sales"
         }
-      ],
-      "custom": {
-        "title": "Need a custom solution?",
-        "description": "Contact our sales team for a customized plan tailored to your specific requirements.",
-        "buttonText": "Contact Us"
-      }
+      ]
     },
     "closing": {
       "heading": "Invest together without risking your relationships.",
@@ -421,7 +442,7 @@
       "footnote": ""
     },
     "footer": {
-      "companyName": "Vaultx",
+      "companyName": "Vault",
       "tagline": "Transforming how businesses operate with intuitive, powerful software solutions.",
       "links": [
         {
@@ -456,7 +477,7 @@
         }
       ],
       "legal": {
-        "copyright": "© 2025 Vaultx. All rights reserved.",
+        "copyright": " 2025 Vault. All rights reserved.",
         "links": [
           { "name": "Terms of Service", "href": "#" },
           { "name": "Privacy Policy", "href": "#" },
@@ -466,6 +487,18 @@
     }
   },
   "set3": {
+    "nav": {
+      "logo": "Vault",
+      "links": [
+        { "text": "How it works", "href": "#how" },
+        { "text": "Features", "href": "#features" },
+        { "text": "Pricing", "href": "#pricing" }
+      ],
+      "cta": {
+        "primary": { "text": "Join waitlist", "href": "#signup" },
+        "secondary": { "text": "Get a demo", "href": "#demo" }
+      }
+    },
     "hero": {
       "heading": "No fights, just funds.",
       "subheading": "Vault makes group investing simple, fair, and transparent — so you can grow your wealth together without the conflict.",
@@ -498,53 +531,59 @@
         {
           "number": "01",
           "title": "Create a Group",
-          "description": "Invite friends or colleagues.",
-          "icon": "🔑"
+          "description": "Invite friends or colleagues."
         },
         {
           "number": "02",
           "title": "Set the Rules",
-          "description": "Agree upfront with easy templates.",
-          "icon": "⚙️"
+          "description": "Agree upfront with easy templates."
         },
         {
           "number": "03",
           "title": "Pool Money",
-          "description": "Every contribution tracked in real time.",
-          "icon": "📊"
+          "description": "Every contribution tracked in real time."
         },
         {
           "number": "04",
           "title": "Invest Together",
-          "description": "Vote, decide, and grow as a team.",
-          "icon": "✨"
+          "description": "Vote, decide, and grow as a team."
         }
       ]
     },
     "features": {
-      "heading": "Everything You Need",
-      "tagline": "Key Features",
-      "subheading": "Discover the tools that will transform your business operations",
-      "featureList": [
+      "heading": "Powerful Features For Successful Group Investing",
+      "tagline": "Built For Groups",
+      "description": "Everything you need to manage your investment group efficiently",
+      "items": [
         {
-          "title": "Conflict-Free",
-          "description": "Transparent tracking and voting.",
-          "icon": "📱"
-        },
-        {
-          "title": "Fair & Simple",
-          "description": "No lawyers, no spreadsheets.",
-          "icon": "📊"
-        },
-        {
-          "title": "Stay Aligned",
-          "description": "Rules keep everyone on the same page.",
+          "title": "Member Management",
+          "description": "Add, remove, and manage member permissions with ease.",
           "icon": "👥"
         },
         {
-          "title": "Easy Exits",
-          "description": "Leave smoothly without hurting the group.",
-          "icon": "☁️"
+          "title": "Contribution Tracking",
+          "description": "Monitor who has contributed what and when.",
+          "icon": "💰"
+        },
+        {
+          "title": "Voting System",
+          "description": "Built-in tools for democratic investment decisions.",
+          "icon": "🗳️"
+        },
+        {
+          "title": "Document Storage",
+          "description": "Keep all important documents in one secure place.",
+          "icon": "📁"
+        },
+        {
+          "title": "Bank Integration",
+          "description": "Connect directly with your group's bank account.",
+          "icon": "🏦"
+        },
+        {
+          "title": "Performance Reporting",
+          "description": "Track your group's investments performance over time.",
+          "icon": "📊"
         }
       ]
     },
@@ -558,7 +597,7 @@
       },
       "testimonials": [
         {
-          "quote": "Vaultx transformed how our team works together. We've seen a 40% increase in productivity and our clients are happier than ever.",
+          "quote": "Vault transformed how our team works together. We've seen a 40% increase in productivity and our clients are happier than ever.",
           "name": "Sarah Johnson",
           "title": "CEO, TechVision Inc.",
           "avatar": "👩🏽‍💼"
@@ -578,66 +617,58 @@
       ]
     },
     "pricing": {
-      "heading": "Choose the Right Plan",
+      "heading": "Simple, Transparent Pricing",
       "tagline": "Pricing Plans",
-      "subheading": "Flexible options to suit businesses of any size. All plans include a 14-day free trial.",
+      "subheading": "Choose the plan that fits your group's size and needs",
+      "footnote": "All plans include a 14-day free trial. No credit card required to start.",
       "plans": [
         {
           "name": "Starter",
-          "price": "$120",
+          "price": "49",
           "period": "per month",
-          "description": "Perfect for small businesses just getting started",
+          "description": "Perfect for small investment groups just getting started.",
           "features": [
-            "Up to 5 team members",
-            "Basic automation features",
-            "10GB cloud storage",
-            "Standard analytics",
+            "Up to 5 members",
+            "Basic contribution tracking",
+            "Simple voting system",
+            "Document storage (5GB)",
             "Email support"
           ],
-          "isPopular": false,
-          "ctaText": "Start Free Trial"
+          "featured": false,
+          "cta": "Get Started"
         },
         {
-          "name": "Professional",
-          "price": "$240",
+          "name": "Growth",
+          "price": "99",
           "period": "per month",
-          "description": "Ideal for growing businesses with expanding needs",
+          "description": "For established groups looking to scale efficiently.",
           "features": [
-            "Up to 20 team members",
-            "Advanced automation tools",
-            "100GB cloud storage",
-            "Enhanced analytics & reporting",
-            "Priority email & chat support",
-            "API access",
-            "Custom integrations"
+            "Up to 15 members",
+            "Advanced contribution tracking",
+            "Full voting & governance tools",
+            "Document storage (20GB)",
+            "Priority email & chat support"
           ],
-          "isPopular": true,
-          "ctaText": "Start Free Trial"
+          "featured": true,
+          "cta": "Try Risk-Free"
         },
         {
           "name": "Enterprise",
-          "price": "$199",
+          "price": "249",
           "period": "per month",
-          "description": "For large organizations requiring premium features",
+          "description": "For large or multiple investment groups with advanced needs.",
           "features": [
-            "Unlimited team members",
-            "Full automation suite",
-            "Unlimited cloud storage",
-            "Advanced AI analytics",
-            "24/7 dedicated support",
-            "Advanced security controls",
-            "Custom development",
-            "Dedicated account manager"
+            "Unlimited members",
+            "Custom contribution models",
+            "Advanced governance tools",
+            "Unlimited document storage",
+            "Dedicated account manager",
+            "API access"
           ],
-          "isPopular": false,
-          "ctaText": "Contact Sales"
+          "featured": false,
+          "cta": "Contact Sales"
         }
-      ],
-      "custom": {
-        "title": "Need a custom solution?",
-        "description": "Contact our sales team for a customized plan tailored to your specific requirements.",
-        "buttonText": "Contact Us"
-      }
+      ]
     },
     "closing": {
       "heading": "Group investing made easy.",
@@ -654,42 +685,44 @@
       "footnote": ""
     },
     "footer": {
-      "companyName": "Vaultx",
-      "tagline": "Transforming how businesses operate with intuitive, powerful software solutions.",
-      "links": [
+      "companyName": "Vault",
+      "description": "Transforming the way investment groups collaborate and thrive.",
+      "socialLinks": [
+        { "name": "Facebook", "href": "#" },
+        { "name": "Twitter", "href": "#" },
+        { "name": "Instagram", "href": "#" },
+        { "name": "LinkedIn", "href": "#" }
+      ],
+      "columns": [
         {
           "title": "Product",
           "links": [
             { "name": "Features", "href": "#features" },
+            { "name": "Solutions", "href": "#" },
             { "name": "Pricing", "href": "#pricing" },
-            { "name": "Testimonials", "href": "#testimonials" },
-            { "name": "Integrations", "href": "#" },
-            { "name": "Updates", "href": "#" }
-          ]
-        },
-        {
-          "title": "Resources",
-          "links": [
-            { "name": "Documentation", "href": "#" },
-            { "name": "Tutorials", "href": "#" },
-            { "name": "Blog", "href": "#" },
-            { "name": "Support Center", "href": "#" },
-            { "name": "Partners", "href": "#" }
+            { "name": "FAQ", "href": "#" }
           ]
         },
         {
           "title": "Company",
           "links": [
-            { "name": "About Us", "href": "#" },
+            { "name": "About", "href": "#" },
+            { "name": "Blog", "href": "#" },
             { "name": "Careers", "href": "#" },
-            { "name": "Press", "href": "#" },
-            { "name": "Contact", "href": "#" },
-            { "name": "Privacy Policy", "href": "#" }
+            { "name": "Press", "href": "#" }
+          ]
+        },
+        {
+          "title": "Resources",
+          "links": [
+            { "name": "Help Center", "href": "#" },
+            { "name": "Documentation", "href": "#" },
+            { "name": "Contact", "href": "#contact" }
           ]
         }
       ],
       "legal": {
-        "copyright": "© 2025 Vaultx. All rights reserved.",
+        "copyright": "2025 Vault. All rights reserved.",
         "links": [
           { "name": "Terms of Service", "href": "#" },
           { "name": "Privacy Policy", "href": "#" },

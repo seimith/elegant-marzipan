@@ -1,49 +1,58 @@
 "use client";
 
 import React from 'react';
-// import Image from 'next/image';
 import { useCopy } from '../../content/CopyContext';
+
+function StepCard({ number, title, description }: { number: string; title: string; description: string }) {
+  return (
+    <div className="rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-md transition-shadow">
+      <div className="flex items-center gap-3 mb-4">
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-900 font-semibold">
+          {number}
+        </div>
+      </div>
+      <h3 className="font-semibold text-slate-900 mb-2">{title}</h3>
+      <p className="text-sm text-slate-600 leading-relaxed">{description}</p>
+    </div>
+  );
+}
 
 const HowItWorks = () => {
   const { content } = useCopy();
   const howContent = content.howItWorks;
   
-  // Add icons to the steps from JSON
-  const icons = ['🔑', '⚙️', '📊', '✨'];
-  const steps = howContent.steps.map((step, index) => ({
+
+  const steps = howContent.steps.map((step: any, index: number) => ({
     ...step,
-    icon: icons[index % icons.length],
     number: `0${index + 1}`
   }));
 
   return (
-    <section id="how-it-works" className="py-24 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <span className="text-purple-600 font-semibold uppercase tracking-wider">{howContent.tagline}</span>
-          <h2 className="mt-2 text-4xl font-bold tracking-tight text-gray-900">
-            {howContent.heading}
-          </h2>
-          <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
-            {howContent.subheading}
-          </p>
+    <section className="relative overflow-hidden bg-gradient-to-b from-white to-slate-50" id="how">
+      <div className="absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)] bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.03),transparent_60%)]"></div>
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs text-slate-600 mb-6">
+            <span className="h-1.5 w-1.5 rounded-full bg-blue-500"></span>
+            {howContent.tagline}
+          </div>
+          <h2 className="text-3xl font-semibold tracking-tight text-slate-900">{howContent.heading}</h2>
+          <p className="mt-4 max-w-2xl mx-auto text-slate-700">{howContent.subheading}</p>
         </div>
         
-        {/* Steps */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {steps.map((step, index) => (
-            <div 
-              key={index}
-              className="relative bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
-            >
-              <div className="text-5xl mb-4">{step.icon}</div>
-              <div className="absolute -top-4 -left-4 h-12 w-12 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold">
-                {step.number}
-              </div>
-              <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-              <p className="text-gray-600">{step.description}</p>
+        <div className="relative mt-16">
+          <div className="rounded-3xl bg-white shadow-xl ring-1 ring-slate-200 p-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {steps.map((step: any, index: number) => (
+                <StepCard 
+                  key={index}
+                  number={step.number}
+                  title={step.title}
+                  description={step.description}
+                />
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>

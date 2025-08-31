@@ -3,76 +3,92 @@
 import React from 'react';
 import { useCopy } from '../../content/CopyContext';
 
+const PricingTier = ({ 
+  name, 
+  price, 
+  description, 
+  features, 
+  cta, 
+  featured = false 
+}: { 
+  name: string; 
+  price: string; 
+  description: string; 
+  features: string[]; 
+  cta: string; 
+  featured?: boolean 
+}) => {
+  return (
+    <div className={`flex flex-col h-full rounded-3xl bg-white p-8 shadow-lg ring-1 ring-slate-200 ${featured ? 'relative z-10 scale-105' : ''}`}>
+      {featured && (
+        <div className="absolute -top-4 left-0 right-0 mx-auto w-32 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 px-3 py-1 text-center text-sm font-medium text-white">
+          Recommended
+        </div>
+      )}
+      <div>
+        <h3 className="text-xl font-semibold text-slate-900">{name}</h3>
+        <p className="mt-2 text-sm text-slate-500">{description}</p>
+        <div className="mt-6">
+          <p className="text-4xl font-semibold text-slate-900">{price}</p>
+          <p className="text-sm text-slate-500">per month, billed annually</p>
+        </div>
+      </div>
+      <div className="mt-8 border-t border-slate-100 pt-8">
+        <ul className="space-y-3">
+          {features.map((feature, idx) => (
+            <li key={idx} className="flex gap-3 text-sm">
+              <svg className="h-5 w-5 flex-shrink-0 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+              {feature}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="mt-8 flex flex-1 items-end">
+        <a 
+          href="#signup" 
+          className={`inline-block w-full rounded-xl px-4 py-3 text-center font-medium ${featured ? 'bg-blue-500 text-white hover:bg-blue-600' : 'bg-slate-100 text-slate-900 hover:bg-slate-200'}`}
+        >
+          {cta}
+        </a>
+      </div>
+    </div>
+  );
+};
+
 const Pricing = () => {
   const { content } = useCopy();
   const pricingContent = content.pricing;
 
   return (
-    <section id="pricing" className="py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <span className="text-purple-600 font-semibold uppercase tracking-wider">{pricingContent.tagline}</span>
-          <h2 className="mt-2 text-4xl font-bold tracking-tight text-gray-900">
-            {pricingContent.heading}
-          </h2>
-          <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
-            {pricingContent.subheading}
-          </p>
+    <section id="pricing" className="py-20 md:py-28 bg-gray-50">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs text-slate-600 mb-6">
+            <span className="h-1.5 w-1.5 rounded-full bg-blue-500"></span>
+            {pricingContent.tagline}
+          </div>
+          <h2 className="text-3xl font-semibold tracking-tight text-slate-900">{pricingContent.heading}</h2>
+          <p className="mt-4 max-w-2xl mx-auto text-slate-700">{pricingContent.subheading}</p>
         </div>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-          {pricingContent.plans.map((plan, index) => (
-            <div 
+
+        <div className="mt-12 grid gap-8 md:grid-cols-3">
+          {pricingContent.plans.map((plan: any, index: number) => (
+            <PricingTier
               key={index}
-              className={`relative p-8 rounded-2xl border ${
-                plan.isPopular 
-                  ? 'border-purple-500 shadow-lg shadow-purple-100' 
-                  : 'border-gray-200'
-              }`}
-            >
-              {plan.isPopular && (
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-bold">
-                  Most Popular
-                </div>
-              )}
-              
-              <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-              <div className="mb-4">
-                <span className="text-4xl font-bold">{plan.price}</span>
-                <span className="text-gray-500"> {plan.period}</span>
-              </div>
-              <p className="text-gray-600 mb-6">{plan.description}</p>
-              
-              <ul className="mb-8 space-y-3">
-                {plan.features.map((feature, i) => (
-                  <li key={i} className="flex items-center">
-                    <span className="mr-2 text-purple-600">✓</span>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              
-              <button 
-                className={`w-full py-3 rounded-lg font-medium ${
-                  plan.isPopular
-                    ? 'bg-purple-600 hover:bg-purple-700 text-white'
-                    : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                } transition-colors`}
-              >
-                {plan.ctaText}
-              </button>
-            </div>
+              name={plan.name}
+              price={`$${plan.price}`}
+              description={plan.description || `${plan.name} tier for investment groups`}
+              features={plan.features}
+              cta={plan.cta}
+              featured={plan.featured}
+            />
           ))}
         </div>
-        
-        <div className="mt-16 bg-gray-50 p-8 rounded-xl text-center">
-          <h3 className="text-xl font-bold mb-2">{pricingContent.custom.title}</h3>
-          <p className="text-gray-600 mb-4">
-            {pricingContent.custom.description}
-          </p>
-          <button className="px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors">
-            {pricingContent.custom.buttonText}
-          </button>
+
+        <div className="mt-10 text-center text-sm text-slate-500">
+          {pricingContent.footnote}
         </div>
       </div>
     </section>

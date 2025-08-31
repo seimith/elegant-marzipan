@@ -8,41 +8,29 @@ const ProblemSolution = () => {
   const psContent = content.problemSolution;
 
   return (
-    <section id="problem-solution" className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <span className="text-purple-600 font-semibold uppercase tracking-wider">{psContent.tagline}</span>
-          <h2 className="mt-2 text-4xl font-bold tracking-tight text-gray-900">
-            {psContent.heading}
-          </h2>
+    <section id="solution" className="py-20 md:py-28 bg-white">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 className="text-3xl font-semibold tracking-tight text-slate-900">{psContent.problem.title}</h2>
+          <p className="mt-4 text-slate-700 leading-relaxed">
+            {psContent.problem.points[0]}
+          </p>
+          <ul className="mt-6 list-disc pl-5 text-slate-700 space-y-2">
+            {psContent.problem.points.slice(1).map((point, index) => (
+              <li key={index}>{point}</li>
+            ))}
+          </ul>
         </div>
-        
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          {/* Problem Side */}
-          <div className="bg-red-50 p-8 rounded-2xl border border-red-100">
-            <h3 className="text-2xl font-bold text-red-800 mb-4">{psContent.problem.title}</h3>
-            <ul className="space-y-4">
-              {psContent.problem.points.map((item: string, i: number) => (
-                <li key={i} className="flex items-start">
-                  <span className="mr-3 text-red-500 flex-shrink-0">✖</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          
-          {/* Solution Side */}
-          <div className="bg-green-50 p-8 rounded-2xl border border-green-100">
-            <h3 className="text-2xl font-bold text-green-800 mb-4">{psContent.solution.title}</h3>
-            <ul className="space-y-4">
-              {psContent.solution.points.map((item: string, i: number) => (
-                <li key={i} className="flex items-start">
-                  <span className="mr-3 text-green-500 flex-shrink-0">✓</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div>
+          <h2 className="text-3xl font-semibold tracking-tight text-slate-900">{psContent.solution.title}</h2>
+          <p className="mt-4 text-slate-700 leading-relaxed">
+            {psContent.solution.points[0]}
+          </p>
+          <ul className="mt-6 list-disc pl-5 text-slate-700 space-y-2">
+            {psContent.solution.points.slice(1).map((point, index) => (
+              <li key={index}>{point}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

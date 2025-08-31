@@ -1,70 +1,64 @@
 "use client";
 
 import React from 'react';
-// import Image from 'next/image';
 import { useCopy } from '../../content/CopyContext';
+
+interface TestimonialFeatured {
+  quote: string;
+  name: string;
+  title: string;
+  image?: string;
+}
 
 const Testimonial = () => {
   const { content } = useCopy();
-  const testimonialContent = content.testimonial;
+  const testimonialContent = content.testimonial as any;
   
-  // Add avatars to testimonials
-  const avatars = ["👩🏽‍💼", "👨🏻‍💼", "👩🏻‍💼"];
-  const testimonials = testimonialContent.testimonials.map((testimonial, index) => ({
-    ...testimonial,
-    avatar: avatars[index % avatars.length]
-  }));
+  // Extract featured testimonial data with fallbacks
+  const featured: TestimonialFeatured = {
+    quote: testimonialContent?.featured?.quote || "Vault saved us from endless group chats and spreadsheets. No more arguments — just clear, simple investing together.",
+    name: testimonialContent?.featured?.name || "David Anderson",
+    title: testimonialContent?.featured?.title || "CTO, Global Innovations",
+    image: testimonialContent?.featured?.image || "/placeholder-person.jpg"
+  };
 
   return (
-    <section id="testimonials" className="py-24 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <span className="text-purple-600 font-semibold uppercase tracking-wider">{testimonialContent.tagline}</span>
-          <h2 className="mt-2 text-4xl font-bold tracking-tight text-gray-900">
-            {testimonialContent.heading}
-          </h2>
-        </div>
-
-        {/* Featured Testimonial */}
-        <div className="mb-16 bg-white p-8 md:p-12 rounded-2xl shadow-lg border border-gray-100 relative">
-          <div className="absolute top-0 left-0 transform -translate-x-4 -translate-y-4 text-8xl text-purple-200">&quot;</div>
-          <div className="relative z-10">
-            <p className="text-xl md:text-2xl font-light italic text-gray-700 mb-8">
-              {testimonialContent.featured.quote}
+    <section id="testimonial" className="py-20 md:py-28 bg-white">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-3 gap-10 items-center">
+          <div className="md:col-span-1">
+            <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs text-slate-600 mb-6">
+              <span className="h-1.5 w-1.5 rounded-full bg-yellow-500"></span>
+              {testimonialContent?.tagline || "From our users"}
+            </div>
+            <h2 className="text-3xl font-semibold tracking-tight text-slate-900">
+              {testimonialContent?.heading || "Trusted by investment groups nationwide"}
+            </h2>
+            <p className="mt-4 text-slate-700 leading-relaxed">
+              See why investment clubs and property syndicates choose our platform to manage their groups.
             </p>
-            
-            <div className="flex items-center">
-              <div className="h-16 w-16 bg-purple-200 rounded-full flex items-center justify-center text-3xl">
-                👨🏽‍💼
+          </div>
+          <div className="md:col-span-2">
+            <div className="bg-white rounded-2xl shadow-lg border border-slate-100 p-8">
+              <div className="flex items-center gap-4 mb-6">
+                <img 
+                  className="h-14 w-14 rounded-full object-cover" 
+                  src={featured.image} 
+                  alt={featured.name} 
+                />
+                <div>
+                  <h3 className="font-semibold text-slate-900">{featured.name}</h3>
+                  <p className="text-sm text-slate-600">{featured.title}</p>
+                </div>
               </div>
-              <div className="ml-4">
-                <h4 className="font-bold">{testimonialContent.featured.name}</h4>
-                <p className="text-gray-600">{testimonialContent.featured.title}</p>
+              <div className="text-yellow-400 mb-4">
+                {'★'.repeat(5)}
               </div>
+              <blockquote className="text-lg text-slate-700 leading-relaxed">
+                "{featured.quote}"
+              </blockquote>
             </div>
           </div>
-        </div>
-        
-        {/* Additional Testimonials */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div 
-              key={index} 
-              className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
-            >
-              <div className="text-purple-600 text-4xl mb-4">&quot;</div>
-              <p className="italic mb-8">{testimonial.quote}</p>
-              <div className="flex items-center">
-                <div className="h-12 w-12 bg-purple-100 rounded-full flex items-center justify-center text-2xl">
-                  {testimonial.avatar}
-                </div>
-                <div className="ml-3">
-                  <h4 className="font-bold">{testimonial.name}</h4>
-                  <p className="text-sm text-gray-600">{testimonial.title}</p>
-                </div>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
