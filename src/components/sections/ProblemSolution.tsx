@@ -44,12 +44,6 @@ const ProblemSolution = () => {
             </ul>
           </div>
         </div>
-        
-        <div className="mt-16 text-center">
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {psContent.statsText}
-          </p>
-        </div>
       </div>
     </section>
   );
