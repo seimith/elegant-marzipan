@@ -31,7 +31,7 @@ const HowItWorks = () => {
   }));
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white to-slate-50" id="how">
+    <section className="relative overflow-hidden bg-white" id="how">
       <div className="absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)] bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0.03),transparent_60%)]"></div>
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
         <div className="text-center mb-12">

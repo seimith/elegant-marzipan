@@ -12,7 +12,7 @@ const Closing = () => {
   if (!closingContent) return null;
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-slate-900 to-slate-800">
+    <section className="relative overflow-hidden bg-slate-900">
       <div className="absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)] bg-[radial-gradient(ellipse_at_center,rgba(100,116,139,0.2),transparent_60%)]" />
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 md:py-28 text-center">
         <div className="mx-auto max-w-3xl">
@@ -39,8 +39,8 @@ const Closing = () => {
             </a>
             <a
               href={typeof closingContent.cta?.secondary === 'string' ? 
-                '#contact' : 
-                (closingContent.cta?.secondary?.href || '#contact')}
+                '#how' : 
+                (closingContent.cta?.secondary?.href || '#how')}
               className="rounded-xl border border-slate-600 bg-transparent px-5 py-3 text-sm font-medium text-white hover:bg-slate-800"
             >
               {typeof closingContent.cta?.secondary === 'string' ? 

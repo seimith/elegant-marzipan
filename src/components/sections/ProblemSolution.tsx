@@ -12,7 +12,7 @@ const ProblemSolution = () => {
   if (!psContent) return null;
 
   return (
-    <section id="solution" className="py-20 md:py-28 bg-white">
+    <section id="solution" className="py-20 md:py-28 bg-slate-50">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-start">
         <div>
           <h2 className="text-3xl font-semibold tracking-tight text-slate-900">{psContent.problem?.title || 'Common Challenges'}</h2>

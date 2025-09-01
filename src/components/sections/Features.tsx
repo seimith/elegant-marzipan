@@ -34,7 +34,7 @@ const Features = () => {
   const featureItems = featuresContent?.items || featuresContent?.featureList || [];
   
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white" id="features">
+    <section className="relative overflow-hidden bg-slate-50" id="features">
       <div className="absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)] bg-[radial-gradient(ellipse_at_top,rgba(0,0,0,0.03),transparent_60%)]" />
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
         <div className="text-center mb-12">
