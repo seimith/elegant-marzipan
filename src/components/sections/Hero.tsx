@@ -75,7 +75,7 @@ const Hero = () => {
                 (heroContent.cta?.secondary?.text || 'Learn More')}
             </a>
           </div>
-          <div className="mt-8 text-sm text-slate-500">
+          {/* <div className="mt-8 text-sm text-slate-500">
             <span className="font-medium text-slate-700">Copy Set:</span>
             <div className="mt-3 flex gap-2">
               {availableCopySets.map(set => (
@@ -87,7 +87,7 @@ const Hero = () => {
                 >{set}</button>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="relative">
           <div className="aspect-[4/3] w-full rounded-3xl bg-white shadow-xl ring-1 ring-slate-200 p-6">

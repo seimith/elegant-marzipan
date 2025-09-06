@@ -29,9 +29,40 @@ const CopyContext = createContext<CopyContextType | undefined>(undefined);
 
 // Provider component
 export const CopyProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [copySet, setCopySet] = useState<ContentSet>('set1');
-  const content = contentSets[copySet];
   const availableCopySets: ContentSet[] = ['set1', 'set2', 'set3'];
+  
+  // Define weights for each copy set (equal weights for even distribution)
+  // Each copy set has a 33.3% chance of being selected
+  const copySetWeights = {
+    'set1': 1, // 33.3%
+    'set2': 1, // 33.3%
+    'set3': 1  // 33.3%
+  };
+  
+  // Get weighted random copy set on initial load
+  const getWeightedRandomCopySet = (): ContentSet => {
+    // Only run on client-side to avoid hydration errors
+    if (typeof window !== 'undefined') {
+      // Calculate total weight
+      const totalWeight = Object.values(copySetWeights).reduce((sum, weight) => sum + weight, 0);
+      
+      // Generate a random number between 0 and totalWeight
+      const randomNum = Math.random() * totalWeight;
+      
+      // Find the corresponding copy set based on weights
+      let weightSum = 0;
+      for (const set of availableCopySets) {
+        weightSum += copySetWeights[set];
+        if (randomNum < weightSum) {
+          return set;
+        }
+      }
+    }
+    return 'set1'; // Default for server-side rendering
+  };
+  
+  const [copySet, setCopySet] = useState<ContentSet>(getWeightedRandomCopySet);
+  const content = contentSets[copySet];
   
   // Function to handle copy set switching
   const switchCopySet = (set: ContentSet) => {
