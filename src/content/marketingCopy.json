@@ -8,8 +8,8 @@
         { "text": "Pricing", "href": "#pricing" }
       ],
       "cta": {
-        "primary": { "text": "Join waitlist", "href": "#signup" },
-        "secondary": { "text": "Get a demo", "href": "#demo" }
+        "primary": { "text": "Sign Up", "href": "#signup" },
+        "secondary": { "text": "", "href": "" }
       }
     },
     "hero": {
@@ -17,7 +17,7 @@
       "headline": "Group investing without the group drama.",
       "subhead": "Take the conflict out of group investing. Our platform ensures every contribution, payout, and decision is clear and auditable.",
       "cta": {
-        "primary": { "text": "Join the Waitlist", "href": "#signup" },
+        "primary": { "text": "Launching December 2025", "href": "#signup" },
         "secondary": { "text": "See How It Works", "href": "#how" }
       }
     },
@@ -44,7 +44,7 @@
       "steps": [
         {
           "number": "01",
-          "title": "Start a Group",
+          "title": "Launching December 2025",
           "description": "Invite your people."
         },
         {
@@ -193,8 +193,8 @@
         { "number": "28%", "label": "Cost Reduction" }
       ],
       "cta": {
-        "primary": "Join the Waitlist",
-        "secondary": "See How It Works"
+        "primary": { "text": "Launching December 2025", "href": "#demo" },
+        "secondary": { "text": "See How It Works", "href": "#demo" }  
       },
       "footnote": ""
     },
@@ -252,16 +252,16 @@
         { "text": "Pricing", "href": "#pricing" }
       ],
       "cta": {
-        "primary": { "text": "Join waitlist", "href": "#signup" },
-        "secondary": { "text": "Get a demo", "href": "#demo" }
+        "primary": { "text": "Sign Up", "href": "#signup" },
+        "secondary": { "text": "", "href": "" }
       }
     },
     "hero": {
       "heading": "Keep the fun in friends and the fights out of funds.",
       "subheading": "Vault makes it easy to invest together without risking relationships. Pool your money, invest transparently, and keep the good vibes intact.",
       "cta": {
-        "primary": "Join the Waitlist",
-        "secondary": "Learn How It Works"
+        "primary": { "text": "Start group investing in December 2025", "href": "#signup" },
+        "secondary": { "text": "Learn How It Works", "href": "#how" }
       }
     },
     "problemSolution": {
@@ -436,7 +436,7 @@
         { "number": "28%", "label": "Cost Reduction" }
       ],
       "cta": {
-        "primary": "Join the Waitlist",
+        "primary": "Launching December 2025",
         "secondary": "See How It Works"
       },
       "footnote": ""
@@ -495,16 +495,16 @@
         { "text": "Pricing", "href": "#pricing" }
       ],
       "cta": {
-        "primary": { "text": "Join waitlist", "href": "#signup" },
-        "secondary": { "text": "Get a demo", "href": "#demo" }
+        "primary": { "text": "Sign Up", "href": "#signup" },
+        "secondary": { "text": "", "href": "" }
       }
     },
     "hero": {
       "heading": "No fights, just funds.",
       "subheading": "Vault makes group investing simple, fair, and transparent — so you can grow your wealth together without the conflict.",
       "cta": {
-        "primary": "Start Your Group",
-        "secondary": "See How It Works"
+        "primary": { "text": "Start your group in December 2025", "href": "#signup" },
+        "secondary": { "text": "See How It Works", "href": "#how" }
       }
     },
     "problemSolution": {
@@ -679,7 +679,7 @@
         { "number": "28%", "label": "Cost Reduction" }
       ],
       "cta": {
-        "primary": "Join the Waitlist",
+        "primary": "Launching December 2025",
         "secondary": "See How It Works"
       },
       "footnote": ""
