@@ -17,7 +17,7 @@ import { useCopy, ContentSet } from '../../content/CopyContext';
 // }
 
 const Hero = () => {
-  const { content, activeCopySet, availableCopySets, switchCopySet } = useCopy();
+  const { content, availableCopySets, switchCopySet } = useCopy();
   const heroContent = content.hero;
 
   // Early return if no content

@@ -1,8 +1,9 @@
 "use client";
 
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, useMemo, ReactNode } from 'react';
 import contentSets from './marketingCopy.json';
 import { CopyContentType } from '../types/copyTypes';
+import { trackCopySetView } from '../lib/analytics';
 
 // Define content set types
 export type ContentSet = 'set1' | 'set2' | 'set3';
@@ -29,40 +30,70 @@ const CopyContext = createContext<CopyContextType | undefined>(undefined);
 
 // Provider component
 export const CopyProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const availableCopySets: ContentSet[] = ['set1', 'set2', 'set3'];
+  // Use useMemo to prevent recreation on every render
+  const availableCopySets = useMemo<ContentSet[]>(() => ['set1', 'set2', 'set3'], []);
   
   // Define weights for each copy set (equal weights for even distribution)
   // Each copy set has a 33.3% chance of being selected
-  const copySetWeights = {
+  const copySetWeights = useMemo(() => ({
     'set1': 1, // 33.3%
     'set2': 1, // 33.3%
     'set3': 1  // 33.3%
-  };
+  }), []);
   
-  // Get weighted random copy set on initial load
-  const getWeightedRandomCopySet = (): ContentSet => {
-    // Only run on client-side to avoid hydration errors
+  // Initial copy set - always start with 'set1' to prevent hydration mismatches
+  const [copySet, setCopySet] = useState<ContentSet>('set1');
+  
+  // Get weighted random copy set after initial hydration
+  useEffect(() => {
+    // Only run on client-side after hydration is complete
     if (typeof window !== 'undefined') {
-      // Calculate total weight
-      const totalWeight = Object.values(copySetWeights).reduce((sum, weight) => sum + weight, 0);
+      // Check URL parameters - only use if explicitly provided
+      const urlParams = new URLSearchParams(window.location.search);
+      const copyParam = urlParams.get('copy');
       
-      // Generate a random number between 0 and totalWeight
+      // Only use URL parameter if explicitly provided and valid
+      if (copyParam && availableCopySets.includes(copyParam as ContentSet)) {
+        setCopySet(copyParam as ContentSet);
+        return;
+      }
+      
+      // For all other cases (including page refresh), use random selection
+      
+      // Otherwise choose a random copy set based on weights
+      const totalWeight = Object.values(copySetWeights).reduce((sum, weight) => sum + weight, 0);
       const randomNum = Math.random() * totalWeight;
       
-      // Find the corresponding copy set based on weights
       let weightSum = 0;
       for (const set of availableCopySets) {
         weightSum += copySetWeights[set];
         if (randomNum < weightSum) {
-          return set;
+          setCopySet(set);
+          break;
         }
       }
     }
-    return 'set1'; // Default for server-side rendering
-  };
-  
-  const [copySet, setCopySet] = useState<ContentSet>(getWeightedRandomCopySet);
+  }, [availableCopySets, copySetWeights]); // Add dependencies as recommended by ESLint
   const content = contentSets[copySet];
+  
+  // Track which copy set is displayed to the user
+  useEffect(() => {
+    // Only track on client-side and skip the initial server-rendered 'set1' unless it was chosen randomly
+    if (typeof window !== 'undefined') {
+      // Only track and update URL/storage when copy set changes (skip initial hydration)
+      if (document.readyState === 'complete') {
+        trackCopySetView(copySet);
+        
+        // Store in sessionStorage to allow persistent analysis
+        sessionStorage.setItem('activeCopySet', copySet);
+        
+        // Include the copy set ID in URL parameters for server-side tracking
+        const url = new URL(window.location.href);
+        url.searchParams.set('copy', copySet);
+        window.history.replaceState({}, '', url);
+      }
+    }
+  }, [copySet]);
   
   // Function to handle copy set switching
   const switchCopySet = (set: ContentSet) => {
