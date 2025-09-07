@@ -4,8 +4,7 @@
       "logo": "Vault",
       "links": [
         { "text": "How it works", "href": "#how" },
-        { "text": "Features", "href": "#features" },
-        { "text": "Pricing", "href": "#pricing" }
+        { "text": "Features", "href": "#features" }
       ],
       "cta": {
         "primary": { "text": "Sign Up", "href": "https://form.typeform.com/to/eS852qb2" },
@@ -201,35 +200,20 @@
     "footer": {
       "companyName": "Vault",
       "tagline": "Transforming how businesses operate with intuitive, powerful software solutions.",
-      "links": [
+      "columns": [
         {
           "title": "Product",
           "links": [
-            { "name": "Features", "href": "#features" },
-            { "name": "Pricing", "href": "#pricing" },
-            { "name": "Testimonials", "href": "#testimonials" },
-            { "name": "Integrations", "href": "#" },
-            { "name": "Updates", "href": "#" }
+            { "name": "How it works", "href": "#how" },
+            { "name": "Features", "href": "#features" }
           ]
         },
         {
           "title": "Resources",
           "links": [
             { "name": "Documentation", "href": "#" },
-            { "name": "Tutorials", "href": "#" },
-            { "name": "Blog", "href": "#" },
-            { "name": "Support Center", "href": "#" },
-            { "name": "Partners", "href": "#" }
-          ]
-        },
-        {
-          "title": "Company",
-          "links": [
-            { "name": "About Us", "href": "#" },
-            { "name": "Careers", "href": "#" },
-            { "name": "Press", "href": "#" },
-            { "name": "Contact", "href": "#" },
-            { "name": "Privacy Policy", "href": "#" }
+            { "name": "Help Center", "href": "#" },
+            { "name": "Contact", "href": "#contact" }
           ]
         }
       ],
@@ -248,8 +232,7 @@
       "logo": "Vault",
       "links": [
         { "text": "How it works", "href": "#how" },
-        { "text": "Features", "href": "#features" },
-        { "text": "Pricing", "href": "#pricing" }
+        { "text": "Features", "href": "#features" }
       ],
       "cta": {
         "primary": { "text": "Sign Up", "href": "https://form.typeform.com/to/eS852qb2" },
@@ -444,35 +427,20 @@
     "footer": {
       "companyName": "Vault",
       "tagline": "Transforming how businesses operate with intuitive, powerful software solutions.",
-      "links": [
+      "columns": [
         {
           "title": "Product",
           "links": [
-            { "name": "Features", "href": "#features" },
-            { "name": "Pricing", "href": "#pricing" },
-            { "name": "Testimonials", "href": "#testimonials" },
-            { "name": "Integrations", "href": "#" },
-            { "name": "Updates", "href": "#" }
+            { "name": "How it works", "href": "#how" },
+            { "name": "Features", "href": "#features" }
           ]
         },
         {
           "title": "Resources",
           "links": [
             { "name": "Documentation", "href": "#" },
-            { "name": "Tutorials", "href": "#" },
-            { "name": "Blog", "href": "#" },
-            { "name": "Support Center", "href": "#" },
-            { "name": "Partners", "href": "#" }
-          ]
-        },
-        {
-          "title": "Company",
-          "links": [
-            { "name": "About Us", "href": "#" },
-            { "name": "Careers", "href": "#" },
-            { "name": "Press", "href": "#" },
-            { "name": "Contact", "href": "#" },
-            { "name": "Privacy Policy", "href": "#" }
+            { "name": "Help Center", "href": "#" },
+            { "name": "Contact", "href": "#contact" }
           ]
         }
       ],
@@ -491,8 +459,7 @@
       "logo": "Vault",
       "links": [
         { "text": "How it works", "href": "#how" },
-        { "text": "Features", "href": "#features" },
-        { "text": "Pricing", "href": "#pricing" }
+        { "text": "Features", "href": "#features" }
       ],
       "cta": {
         "primary": { "text": "Sign Up", "href": "https://form.typeform.com/to/eS852qb2" },
@@ -687,36 +654,19 @@
     "footer": {
       "companyName": "Vault",
       "description": "Transforming the way investment groups collaborate and thrive.",
-      "socialLinks": [
-        { "name": "Facebook", "href": "#" },
-        { "name": "Twitter", "href": "#" },
-        { "name": "Instagram", "href": "#" },
-        { "name": "LinkedIn", "href": "#" }
-      ],
       "columns": [
         {
           "title": "Product",
           "links": [
-            { "name": "Features", "href": "#features" },
-            { "name": "Solutions", "href": "#" },
-            { "name": "Pricing", "href": "#pricing" },
-            { "name": "FAQ", "href": "#" }
-          ]
-        },
-        {
-          "title": "Company",
-          "links": [
-            { "name": "About", "href": "#" },
-            { "name": "Blog", "href": "#" },
-            { "name": "Careers", "href": "#" },
-            { "name": "Press", "href": "#" }
+            { "name": "How it works", "href": "#how" },
+            { "name": "Features", "href": "#features" }
           ]
         },
         {
           "title": "Resources",
           "links": [
-            { "name": "Help Center", "href": "#" },
             { "name": "Documentation", "href": "#" },
+            { "name": "Help Center", "href": "#" },
             { "name": "Contact", "href": "#contact" }
           ]
         }

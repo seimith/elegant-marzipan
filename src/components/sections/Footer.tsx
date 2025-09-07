@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useCopy } from '../../content/CopyContext';
-import { FooterContent, FooterLink, FooterColumn as FooterColumnType } from '../../types/copyTypes';
+import { FooterContent, FooterLink, FooterColumn as FooterColumnType, FooterSection } from '../../types/copyTypes';
 
 // Using types imported from copyTypes.ts
 
@@ -15,7 +15,7 @@ const Footer = () => {
 
   // Handle both footer structures (columns structure or links structure)
   const hasColumns = footerContent?.columns && Array.isArray(footerContent.columns);
-  // const hasLinks = footerContent?.links && Array.isArray(footerContent.links);
+  const hasLinks = footerContent?.links && Array.isArray(footerContent.links);
   const hasSocialLinks = footerContent?.socialLinks && Array.isArray(footerContent.socialLinks);
   
   return (
@@ -73,7 +73,7 @@ const Footer = () => {
               )}
 
               {/* Alternative structure for links */}
-              {/* {hasLinks && !hasColumns && footerContent.links && (
+              {hasLinks && !hasColumns && footerContent.links && (
                 <>
                   {footerContent.links.map((section: FooterSection, index: number) => (
                     <div key={index}>
@@ -95,7 +95,7 @@ const Footer = () => {
                     </div>
                   ))}
                 </>
-              )} */}
+              )}
             </div>
 
             {/* Bottom bar */}
