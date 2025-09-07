@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { useCopy, ContentSet } from '../../content/CopyContext';
+import Image from 'next/image'
 
 // // Card component for the hero section
 // function Card({title, desc}: {title: string; desc: string}){
@@ -75,25 +76,15 @@ const Hero = () => {
                 (heroContent.cta?.secondary?.text || 'Learn More')}
             </a>
           </div>
-          {/* <div className="mt-8 text-sm text-slate-500">
-            <span className="font-medium text-slate-700">Copy Set:</span>
-            <div className="mt-3 flex gap-2">
-              {availableCopySets.map(set => (
-                <button
-                  key={set}
-                  onClick={() => switchCopySet(set)}
-                  className={`rounded-full border px-3 py-1 ${activeCopySet===set?"bg-black text-white border-black":"border-slate-300 text-slate-700 hover:bg-slate-50"}`}
-                  aria-label={`Switch hero copy to ${set}`}
-                >{set}</button>
-              ))}
-            </div>
-          </div> */}
         </div>
         <div className="relative">
-          <div className="aspect-[4/3] w-full rounded-3xl bg-white shadow-xl ring-1 ring-slate-200 p-6">
-            <div className="grid grid-cols-2 gap-4 h-full">
-            {/* <Card key={0} title="" desc="" /> */}
-            </div>
+          <div className="aspect-[4/3] w-full rounded-3xl bg-slate-100 shadow-xl ring-1 ring-slate-200 p-6 relative overflow-hidden">
+            <Image 
+              src="/vaultscreen.png" 
+              alt="Screenshot of Vault"
+              fill
+              style={{ objectFit: 'cover', padding: '1rem' }}
+            />
           </div>
         </div>
       </div>
