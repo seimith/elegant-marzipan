@@ -213,8 +213,6 @@
         {
           "title": "Resources",
           "links": [
-            { "name": "Documentation", "href": "#" },
-            { "name": "Help Center", "href": "#" },
             { "name": "Contact", "href": "#contact" }
           ]
         }
@@ -442,8 +440,6 @@
         {
           "title": "Resources",
           "links": [
-            { "name": "Documentation", "href": "#" },
-            { "name": "Help Center", "href": "#" },
             { "name": "Contact", "href": "#contact" }
           ]
         }

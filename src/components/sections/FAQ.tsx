@@ -41,7 +41,7 @@ const FAQ = () => {
   const faqs = [
     {
       question: "What is Vault?",
-      answer: "Vault is a platform that lets you and your friends, family, or peers pool money into a legally distinct investment group (an LLC series) and manage everything from agreements to cash flow in one place."
+      answer: "Vault helps you and your friends, family, or peers pool money into a legally distinct investment group and manage everything from agreements to cash flow in one place. We’re not a fund, and we don’t give investment advice—everything stays in your control."
     },
     {
       question: "Do I need to be an investment expert to use Vault?",
@@ -56,7 +56,7 @@ const FAQ = () => {
       answer: "Each group has a dedicated bank account with transparent contributions and distributions. Funds are kept separate from Vault's operations and other groups."
     },
     {
-      question: "How does Vault prevent fights within the group?",
+      question: "How does Vault prevent disputes within the group?",
       answer: "All decisions — from new deals to exits — are made through built-in real-time voting. Your group agrees on rules up front with a custom operating agreement, so expectations are clear."
     },
     {
@@ -65,7 +65,7 @@ const FAQ = () => {
     },
     {
       question: "How much does Vault cost?",
-      answer: "Vault charges a simple flat fee per group, which covers LLC setup, compliance, and ongoing automation."
+      answer: "Vault keeps pricing simple: a flat fee for setup and compliance, a monthly fee for administration, and a small additional charge for off-schedule distributions (like exits), based on asset class."
     },
     {
       question: "Who owns the assets — me, my group, or Vault?",
