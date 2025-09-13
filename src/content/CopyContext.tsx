@@ -6,7 +6,7 @@ import { CopyContentType } from '../types/copyTypes';
 import { trackCopySetView } from '../lib/analytics';
 
 // Define content set types
-export type ContentSet = 'set1' | 'set2' | 'set3';
+export type ContentSet = 'set1' | 'set2';
 type ContentSets = typeof contentSets;
 
 // Use our imported type for better type safety
@@ -31,14 +31,13 @@ const CopyContext = createContext<CopyContextType | undefined>(undefined);
 // Provider component
 export const CopyProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   // Use useMemo to prevent recreation on every render
-  const availableCopySets = useMemo<ContentSet[]>(() => ['set1', 'set2', 'set3'], []);
+  const availableCopySets = useMemo<ContentSet[]>(() => ['set1', 'set2'], []);
   
   // Define weights for each copy set (equal weights for even distribution)
-  // Each copy set has a 33.3% chance of being selected
+  // Each copy set has a 50% chance of being selected
   const copySetWeights = useMemo(() => ({
-    'set1': 1, // 33.3%
-    'set2': 1, // 33.3%
-    'set3': 1  // 33.3%
+    'set1': 1, // 50%
+    'set2': 1 // 50%
   }), []);
   
   // Initial copy set - always start with 'set1' to prevent hydration mismatches
