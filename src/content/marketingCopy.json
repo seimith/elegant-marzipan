@@ -4,7 +4,8 @@
       "logo": "Vault",
       "links": [
         { "text": "How it works", "href": "#how" },
-        { "text": "Features", "href": "#features" }
+        { "text": "Features", "href": "#features" },
+        { "text": "FAQ", "href": "#faq" }
       ],
       "cta": {
         "primary": { "text": "Sign Up", "href": "https://form.typeform.com/to/eS852qb2" },
@@ -192,8 +193,8 @@
         { "number": "28%", "label": "Cost Reduction" }
       ],
       "cta": {
-        "primary": { "text": "Launching December 2025", "href": "#demo" },
-        "secondary": { "text": "See How It Works", "href": "#demo" }  
+        "primary": { "text": "Launching December 2025", "href": "https://form.typeform.com/to/eS852qb2" },
+        "secondary": { "text": "See How It Works", "href": "#how" }  
       },
       "footnote": ""
     },
@@ -205,7 +206,8 @@
           "title": "Product",
           "links": [
             { "name": "How it works", "href": "#how" },
-            { "name": "Features", "href": "#features" }
+            { "name": "Features", "href": "#features" },
+            { "name": "FAQ", "href": "#faq" }
           ]
         },
         {
@@ -232,7 +234,8 @@
       "logo": "Vault",
       "links": [
         { "text": "How it works", "href": "#how" },
-        { "text": "Features", "href": "#features" }
+        { "text": "Features", "href": "#features" },
+        { "text": "FAQ", "href": "#faq" }
       ],
       "cta": {
         "primary": { "text": "Sign Up", "href": "https://form.typeform.com/to/eS852qb2" },
@@ -432,7 +435,8 @@
           "title": "Product",
           "links": [
             { "name": "How it works", "href": "#how" },
-            { "name": "Features", "href": "#features" }
+            { "name": "Features", "href": "#features" },
+            { "name": "FAQ", "href": "#faq" }
           ]
         },
         {
