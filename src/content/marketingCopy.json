@@ -13,7 +13,7 @@
     },
     "hero": {
       "badge": "Governance-first group investing",
-      "headline": "Group investing without the group drama.",
+      "headline": "Your money. Your rules. Your crew.",
       "subhead": "Take the conflict out of group investing. Our platform ensures every contribution, payout, and decision is clear and auditable.",
       "cta": {
         "primary": { "text": "Launching December 2025", "href": "https://form.typeform.com/to/eS852qb2" },
@@ -43,17 +43,17 @@
       "steps": [
         {
           "number": "01",
-          "title": "Launching December 2025",
-          "description": "Invite your people."
+          "title": "Invite Your Crew",
+          "description": "Invite your friends or family."
         },
         {
           "number": "02",
-          "title": "Set Rules",
+          "title": "Set the Rules",
           "description": "Agree upfront with easy templates."
         },
         {
           "number": "03",
-          "title": "Pool Money",
+          "title": "Pool the Money",
           "description": "Contributions and balances tracked in real time."
         },
         {
@@ -69,34 +69,34 @@
       "description": "Everything you need to manage your investment group efficiently",
       "items": [
         {
-          "title": "Member Management",
-          "description": "Add, remove, and manage member permissions with ease.",
+          "title": "Custom Group Architecture",
+          "description": "Spin up your own investment group that is a legally distinct series — keeping assets and risks separate.",
           "icon": "👥"
         },
         {
-          "title": "Contribution Tracking",
-          "description": "Monitor who has contributed what and when.",
-          "icon": "💰"
+          "title": "Custom Operating Agreements",
+          "description": "Members can draft their own governance rules using flexible digital templates.",
+          "icon": "⚖️"
         },
         {
-          "title": "Voting System",
-          "description": "Built-in tools for democratic investment decisions.",
+          "title": "Asset Agnostic Setup",
+          "description": "No restrictions on asset class or investment strategy.",
+          "icon": "🌐"
+        },
+        {
+          "title": "Real-Time Voting & Decisions",
+          "description": "Your group votes on deals, exits, or rules inside the app.",
           "icon": "🗳️"
         },
         {
-          "title": "Document Storage",
-          "description": "Keep all important documents in one secure place.",
-          "icon": "📁"
+          "title": "Integrated Cash Flow Management",
+          "description": "Dedicated accounts for each groups that allows for transparent contributions, distributions, and expense tracking.",
+          "icon": "💵"
         },
         {
-          "title": "Bank Integration",
-          "description": "Connect directly with your group's bank account.",
-          "icon": "🏦"
-        },
-        {
-          "title": "Performance Reporting",
-          "description": "Track your group's investments performance over time.",
-          "icon": "📊"
+          "title": "Compliance & Tax Automation",
+          "description": "Franchise fees, filings, and K-1s handled automatically — peace of mind, zero paperwork.",
+          "icon": "🔒"
         }
       ]
     },
@@ -240,7 +240,7 @@
       }
     },
     "hero": {
-      "heading": "Keep the fun in friends and the fights out of funds.",
+      "heading": "Get rich together. Stay friends forever.",
       "subheading": "Vault makes it easy to invest together without risking relationships. Pool your money, invest transparently, and keep the good vibes intact.",
       "cta": {
         "primary": { "text": "Start group investing in December 2025", "href": "https://form.typeform.com/to/eS852qb2" },
@@ -296,34 +296,34 @@
       "description": "Everything you need to manage your investment group efficiently",
       "items": [
         {
-          "title": "Member Management",
-          "description": "Add, remove, and manage member permissions with ease.",
+          "title": "Custom Group Architecture",
+          "description": "Spin up your own investment group that is a legally distinct series — keeping assets and risks separate.",
           "icon": "👥"
         },
         {
-          "title": "Contribution Tracking",
-          "description": "Monitor who has contributed what and when.",
-          "icon": "💰"
+          "title": "Custom Operating Agreements",
+          "description": "Members can draft their own governance rules using flexible digital templates.",
+          "icon": "⚖️"
         },
         {
-          "title": "Voting System",
-          "description": "Built-in tools for democratic investment decisions.",
+          "title": "Asset Agnostic Setup",
+          "description": "No restrictions on asset class or investment strategy.",
+          "icon": "🌐"
+        },
+        {
+          "title": "Real-Time Voting & Decisions",
+          "description": "Your group votes on deals, exits, or rules inside the app.",
           "icon": "🗳️"
         },
         {
-          "title": "Document Storage",
-          "description": "Keep all important documents in one secure place.",
-          "icon": "📁"
+          "title": "Integrated Cash Flow Management",
+          "description": "Dedicated accounts for each groups that allows for transparent contributions, distributions, and expense tracking.",
+          "icon": "💵"
         },
         {
-          "title": "Bank Integration",
-          "description": "Connect directly with your group's bank account.",
-          "icon": "🏦"
-        },
-        {
-          "title": "Performance Reporting",
-          "description": "Track your group's investments performance over time.",
-          "icon": "📊"
+          "title": "Compliance & Tax Automation",
+          "description": "Franchise fees, filings, and K-1s handled automatically — peace of mind, zero paperwork.",
+          "icon": "🔒"
         }
       ]
     },
