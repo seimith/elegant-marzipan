@@ -420,8 +420,8 @@
         { "number": "28%", "label": "Cost Reduction" }
       ],
       "cta": {
-        "primary": "Launching December 2025",
-        "secondary": "See How It Works"
+        "primary": { "text": "Launching December 2025", "href": "https://form.typeform.com/to/eS852qb2" },
+        "secondary": { "text": "See How It Works", "href": "#how" }
       },
       "footnote": ""
     },
