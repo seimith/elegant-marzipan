@@ -47,19 +47,7 @@ export const CopyProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   useEffect(() => {
     // Only run on client-side after hydration is complete
     if (typeof window !== 'undefined') {
-      // Check URL parameters - only use if explicitly provided
-      const urlParams = new URLSearchParams(window.location.search);
-      const copyParam = urlParams.get('copy');
-      
-      // Only use URL parameter if explicitly provided and valid
-      if (copyParam && availableCopySets.includes(copyParam as ContentSet)) {
-        setCopySet(copyParam as ContentSet);
-        return;
-      }
-      
-      // For all other cases (including page refresh), use random selection
-      
-      // Otherwise choose a random copy set based on weights
+      // Choose a random copy set based on weights
       const totalWeight = Object.values(copySetWeights).reduce((sum, weight) => sum + weight, 0);
       const randomNum = Math.random() * totalWeight;
       
@@ -85,11 +73,6 @@ export const CopyProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         
         // Store in sessionStorage to allow persistent analysis
         sessionStorage.setItem('activeCopySet', copySet);
-        
-        // Include the copy set ID in URL parameters for server-side tracking
-        const url = new URL(window.location.href);
-        url.searchParams.set('copy', copySet);
-        window.history.replaceState({}, '', url);
       }
     }
   }, [copySet]);
