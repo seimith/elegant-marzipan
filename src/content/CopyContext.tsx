@@ -33,15 +33,15 @@ export const CopyProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   // Use useMemo to prevent recreation on every render
   const availableCopySets = useMemo<ContentSet[]>(() => ['set1', 'set2'], []);
   
-  // Define weights for each copy set (equal weights for even distribution)
-  // Each copy set has a 50% chance of being selected
+  // Define weights to show only set2 100% of the time
+  // set1 has 0% chance and set2 has 100% chance of being selected
   const copySetWeights = useMemo(() => ({
-    'set1': 1, // 50%
-    'set2': 1 // 50%
+    'set1': 0, // 0%
+    'set2': 1 // 100%
   }), []);
   
-  // Initial copy set - always start with 'set1' to prevent hydration mismatches
-  const [copySet, setCopySet] = useState<ContentSet>('set1');
+  // Initial copy set - always start with 'set2' since we want to show it 100% of the time
+  const [copySet, setCopySet] = useState<ContentSet>('set2');
   
   // Get weighted random copy set after initial hydration
   useEffect(() => {
